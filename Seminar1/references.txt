@@ -1,0 +1,11 @@
+// BinarySearch recursive
+https://www.geeksforgeeks.org/java-program-for-binary-search-recursive-and-iterative/
+
+// Recursive QuickSort
+https://www.geeksforgeeks.org/iterative-quick-sort/
+
+// QuickSort
+https://www.baeldung.com/java-quicksort
+
+// InsertionSort
+The book
