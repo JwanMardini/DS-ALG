@@ -33,7 +33,7 @@ public class BinarySearch {
 
 
     // Main driver method
-    public static void main(String args[])
+    /*public static void main(String args[])
     {
  
         // Creating object of above class
@@ -64,6 +64,6 @@ public class BinarySearch {
             // Print statement
             System.out.println("Element found at index "
                                + result);
-    }
+    }*/
     
 }

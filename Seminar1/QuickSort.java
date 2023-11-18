@@ -1,121 +1,112 @@
+import java.util.Arrays;
+import java.util.Stack;
+
 public class QuickSort {
-    // Java program for implementation of QuickSort  
-	/* This function takes last element as pivot, 
-	places the pivot element at its correct 
-	position in sorted array, and places all 
-	smaller (smaller than pivot) to left of 
-	pivot and all greater elements to right 
-	of pivot */
-	private static int partition(int arr[], int low, int high) 
-	{ 
-		int pivot = arr[high]; 
-		int i = (low - 1); // index of smaller element 
-		for (int j = low; j <= high - 1; j++) { 
-			// If current element is smaller than or 
-			// equal to pivot 
-			if (arr[j] <= pivot) { 
-				i++; 
 
-				// swap arr[i] and arr[j] 
-				int temp = arr[i]; 
-				arr[i] = arr[j]; 
-				arr[j] = temp; 
-			} 
-		} 
+    private static void swap(int[] array, int firstIndex, int secondIndex) {
+        int temp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = temp;
+    }
 
-		// swap arr[i+1] and arr[high] (or pivot) 
-		int temp = arr[i + 1]; 
-		arr[i + 1] = arr[high]; 
-		arr[high] = temp; 
+    public static int pivot(int[] array, int pivotIndex, int endIndex) {
+        int swapIndex = pivotIndex;
+        for (int i = pivotIndex + 1; i <= endIndex; i++) {
+            if (array[i] < array[pivotIndex]) {
+                swapIndex++;
+                swap(array, swapIndex, i);
+            }
+        }
+        swap(array, pivotIndex, swapIndex);
 
-		return i + 1; 
-	} 
+        return swapIndex;
+    }
 
-	/* The main function that implements QuickSort() 
-	arr[] --> Array to be sorted, 
-	low --> Starting index, 
-	high --> Ending index */
-	public void qSort(int arr[], int low, int high) 
-	{ 
-		if (low < high) { 
-			/* pi is partitioning index, arr[pi] is 
-			now at right place */
-			int pi = partition(arr, low, high); 
+//    public static void quickSort(int[] array, int left, int right) {
+//        if (left >= right) return;
+//
+//        int pivotIndex = pivot(array, left, right);
+//        quickSort(array, left, pivotIndex-1);
+//        quickSort(array, pivotIndex+1, right);
+//    }
+//
+//    public static void quickSort(int[] array) {
+//        quickSort(array, 0, array.length-1);
+//    }
 
-			// Recursively sort elements before 
-			// partition and after partition 
-			qSort(arr, low, pi - 1); 
-			qSort(arr, pi + 1, high); 
-		} 
-	}
+    private static void quickSortHelper(int[] array, int left, int right) {
+        if (left < right) {
+            int pivotIndex = pivot(array, left, right);
+            quickSortHelper(array, left, pivotIndex-1);
+            quickSortHelper(array, pivotIndex+1, right);
+        }
+    }
 
-     /* A[] --> Array to be sorted,  
-   l  --> Starting index,  
-   h  --> Ending index */
-    public void quickSortIterative(int arr[], int l, int h) { 
-       // Create an auxiliary stack 
-       int[] stack = new int[h - l + 1]; 
- 
-       // initialize top of stack 
-       int top = -1; 
- 
-       // push initial values of l and h to stack 
-       stack[++top] = l; 
-       stack[++top] = h; 
- 
-       // Keep popping from stack while is not empty 
-       while (top >= 0) { 
-           // Pop h and l 
-           h = stack[top--]; 
-           l = stack[top--]; 
- 
-           // Set pivot element at its correct position 
-           // in sorted array 
-           int p = partition(arr, l, h); 
- 
-           // If there are elements on left side of pivot, 
-           // then push left side to stack 
-           if (p - 1 > l) { 
-               stack[++top] = l; 
-               stack[++top] = p - 1; 
-           } 
- 
-           // If there are elements on right side of pivot, 
-           // then push right side to stack 
-           if (p + 1 < h) { 
-               stack[++top] = p + 1; 
-               stack[++top] = h; 
-           } 
-       } 
-   }
+    public static void quickSortRecursive(int[] array) {
+        quickSortHelper(array, 0, array.length-1);
+    }
 
-   /*public static void main(String args[]) 
-   { 
-       int arr[] = { 4, 3, 5, 2, 1, 3, 2, 3 }; 
-       int n = 8; 
- 
-       // Function calling 
-       quickSortIterative(arr, 0, n - 1); 
- 
-       for (int i = 0; i < n; i++) { 
-           System.out.print(arr[i] + " "); 
-       } 
-   }*/
+
+    public static void quickSortIterative(int[] array){
+         // Create a stack to keep track of subarrays that need to be sorted
+        Stack<Integer> stack = new Stack<>();
+        
+        // Initialize left and right indices for the entire array
+        int left = 0;
+        int right = array.length - 1;
+
+        // Push the initial subarray indices onto the stack
+        stack.push(right);
+        stack.push(left);
+
+        // Process the stack until it is empty
+        while (!stack.isEmpty()) {
+            // Pop the subarray indices from the stack
+            left = stack.pop();
+            right = stack.pop();
+
+            // Partition the subarray and get the pivot index
+            int pivotIndex = pivot(array, left, right);
+
+            // Push the left subarray indices onto the stack if needed
+            if (pivotIndex - 1 > left) {
+                stack.push(pivotIndex - 1);
+                stack.push(left);
+            }
+
+            // Push the right subarray indices onto the stack if needed
+            if (pivotIndex + 1 < right) {
+                stack.push(right);
+                stack.push(pivotIndex + 1);
+            }
+        }
+    
+    }
 
 
 
 
-	// Driver code 
-	/*public static void main(String args[]) 
-	{ 
 
-		int n = 5; 
-		int arr[] = { 4, 2, 6, 9, 2 }; 
+    public static void main(String[] args) {
 
-		qSort(arr, 0, n - 1); 
+        int[] myArray = {4,6,1,7,3,2,5};
 
-		for (int i = 0; i < n; i++) { 
-			System.out.print(arr[i] + " "); 
-		} 
-	}*/
+        int returnedIndex = pivot(myArray, 0, 6);
+
+        System.out.println( "\nReturned Index: " + returnedIndex);
+		quickSortRecursive(myArray);
+
+        System.out.println( Arrays.toString( myArray ) );
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            Returned Index: 3
+            [2, 1, 3, 4, 6, 7, 5]
+
+         */
+
+    }
+
 }
+
