@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Stack;
 
 public class QuickSort {
@@ -22,18 +21,6 @@ public class QuickSort {
         return swapIndex;
     }
 
-//    public static void quickSort(int[] array, int left, int right) {
-//        if (left >= right) return;
-//
-//        int pivotIndex = pivot(array, left, right);
-//        quickSort(array, left, pivotIndex-1);
-//        quickSort(array, pivotIndex+1, right);
-//    }
-//
-//    public static void quickSort(int[] array) {
-//        quickSort(array, 0, array.length-1);
-//    }
-
     private static void quickSortHelper(int[] array, int left, int right) {
         if (left < right) {
             int pivotIndex = pivot(array, left, right);
@@ -42,12 +29,12 @@ public class QuickSort {
         }
     }
 
-    public static void quickSortRecursive(int[] array) {
+    public void quickSortRecursive(int[] array) {
         quickSortHelper(array, 0, array.length-1);
     }
 
 
-    public static void quickSortIterative(int[] array){
+    public void quickSortIterative(int[] array){
          // Create a stack to keep track of subarrays that need to be sorted
         Stack<Integer> stack = new Stack<>();
         
@@ -83,30 +70,19 @@ public class QuickSort {
     
     }
 
+    //    public static void quickSort(int[] array, int left, int right) {
+//        if (left >= right) return;
+//
+//        int pivotIndex = pivot(array, left, right);
+//        quickSort(array, left, pivotIndex-1);
+//        quickSort(array, pivotIndex+1, right);
+//    }
+//
+//    public static void quickSort(int[] array) {
+//        quickSort(array, 0, array.length-1);
+//    }
 
 
-
-
-    public static void main(String[] args) {
-
-        int[] myArray = {4,6,1,7,3,2,5};
-
-        int returnedIndex = pivot(myArray, 0, 6);
-
-        System.out.println( "\nReturned Index: " + returnedIndex);
-		quickSortRecursive(myArray);
-
-        System.out.println( Arrays.toString( myArray ) );
-
-        /*
-            EXPECTED OUTPUT:
-            ----------------
-            Returned Index: 3
-            [2, 1, 3, 4, 6, 7, 5]
-
-         */
-
-    }
 
 }
 
