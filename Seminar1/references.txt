@@ -1,11 +1,21 @@
 // BinarySearch recursive
 https://www.geeksforgeeks.org/java-program-for-binary-search-recursive-and-iterative/
 
-// Recursive QuickSort
+// Recursive QuickSort First element
 https://www.geeksforgeeks.org/iterative-quick-sort/
 
-// QuickSort
+// iterative QuickSort first element
 https://www.baeldung.com/java-quicksort
+
+//Recursive QuickSort Median3
+https://javachallengers.com/quicksort-algorithm-with-java/#:~:text=Choosing%20the%20pivot%20with%20the%20Quicksort%20Algorithm&text=Instead%2C%20we%20try%20to%20choose,the%20element%20in%20the%20middle.
+
+//Iterative Quicksort Median3
+ChatGPT
+
+
+
+
 
 // InsertionSort iterative
 The book
@@ -14,4 +24,3 @@ The book
 https://www.geeksforgeeks.org/recursive-insertion-sort/
 
 
-//
