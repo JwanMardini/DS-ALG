@@ -18,7 +18,8 @@ public class Main {
             quickSortUsingFirstElementPivot(i);
             System.out.println();
             insertionSort(i);
-
+            System.out.println();
+            quickSortMedianPivot(i);
         }
     }
 
@@ -78,17 +79,44 @@ public class Main {
 
     }
 
-    public static void quickSortUsingRandomPivot(int input){
+    public static void quickSortMedianPivot(int input) throws IOException{
+        System.out.println("quickSortMedianPivot");
+        System.out.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
 
+        QuickSortMedian3 qs = new QuickSortMedian3();
+        long totalRunningTimeIterative = 0;
+        long totalRunningTimeRecursion = 0;
+
+        for (int i = 0; i < 10; i++) {
+            // Iterative
+            int[] arr = fileReader(file, input);
+            long startTimeIterative = System.currentTimeMillis();
+            qs.quickSortIterativeWithMedian3Pivot(arr);
+            long currentTimeIterative = System.currentTimeMillis();
+            long runningTimeIterative = currentTimeIterative - startTimeIterative;
+
+            // Recursion
+            int[] arrRecur = fileReader(file, input);
+            long startTimeRecursion = System.currentTimeMillis();
+            try {
+                qs.quickSortRecursiveWithMedian3Pivot(arrRecur);
+                long currentTimeRecursion = System.currentTimeMillis();
+                long runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
+
+                System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "Success");
+
+                totalRunningTimeIterative += runningTimeIterative;
+                totalRunningTimeRecursion += runningTimeRecursion;
+
+            } catch (StackOverflowError e) {
+                System.out.printf("%-5d%-25d%-20s%-25s\n", (i + 1), runningTimeIterative, "", "Stack Overflow");
+            }
+        }
+
+        System.out.println("Average running time iterative: " + totalRunningTimeIterative / 10.0);
+        System.out.println("Average running time recursion: " + totalRunningTimeRecursion / 10.0);
 
     }
-
-
-
-
-
-
-
 
 
     public static void insertionSort(int input) throws IOException{
@@ -110,26 +138,31 @@ public class Main {
 
             // Recursion
             int[] arrRecur = fileReader(file, input);
+            long runningTimeRecursion = 0;
             long startTimeRecursion = System.currentTimeMillis();
             try {
                 is.insertionSortRecursive(arrRecur, arrRecur.length);
                 long currentTimeRecursion = System.currentTimeMillis();
-                long runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
+                runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
 
                 System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "Success");
-
-                totalRunningTimeIterative += runningTimeIterative;
-                totalRunningTimeRecursion += runningTimeRecursion;
 
             } catch (StackOverflowError e) {
                 System.out.printf("%-5d%-25d%-20s%-25s\n", (i + 1), runningTimeIterative, "", "Stack Overflow");
             }
+            totalRunningTimeIterative += runningTimeIterative;
+            totalRunningTimeRecursion += runningTimeRecursion;
         }
 
         System.out.println("Average running time iterative: " + totalRunningTimeIterative / 10.0);
         System.out.println("Average running time recursion: " + totalRunningTimeRecursion / 10.0);
 
     }
+
+
+
+
+
 
 
     public static Integer[] intArrayToIntegerArray(int[] intArray) {
