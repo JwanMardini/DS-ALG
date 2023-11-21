@@ -1,0 +1,14 @@
+insertionSort
+Run  Iterative Running Time   Recursion Running TimeRecursion Status         
+1    8532                                         Stack Overflow           
+2    8218                                         Stack Overflow           
+3    8743                                         Stack Overflow           
+4    10742                                        Stack Overflow           
+5    10939                                        Stack Overflow           
+6    8779                                         Stack Overflow           
+7    8596                                         Stack Overflow           
+8    8962                                         Stack Overflow           
+9    8494                                         Stack Overflow           
+10   9399                                         Stack Overflow           
+Average running time iterative: 9140.4
+Average running time recursion: 0.0
