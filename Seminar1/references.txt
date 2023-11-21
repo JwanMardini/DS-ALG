@@ -13,6 +13,12 @@ https://javachallengers.com/quicksort-algorithm-with-java/#:~:text=Choosing%20th
 //Iterative Quicksort Median3
 ChatGPT
 
+//Recursive QuickSort with random pivot
+https://www.tutorialspoint.com/design_and_analysis_of_algorithms/design_and_analysis_of_algorithms_randomized_quick_sort.htm
+
+//Iterative QuickSort with random pivot
+
+
 
 
 

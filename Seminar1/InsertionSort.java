@@ -1,4 +1,5 @@
 public class InsertionSort {
+    public int counter = 0;
     // Method to perform insertion sort on an array of elements
     public <AnyType extends Comparable<? super AnyType>>
     void insertionSort(AnyType[] a) {
@@ -22,6 +23,7 @@ public class InsertionSort {
 
 
     public void insertionSortRecursive(int arr[], int n) { 
+        this.counter++;
         // Base case 
         if (n <= 1) 
             return; 
@@ -44,6 +46,13 @@ public class InsertionSort {
         } 
         arr[j+1] = last; 
     }
+
+    public int getCounter(){
+        return this.counter;
+    }
+
+
+
 }
      
       

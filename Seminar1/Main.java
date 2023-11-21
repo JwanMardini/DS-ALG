@@ -15,6 +15,7 @@ public class Main {
         clearFile("insertionSort.txt");
         clearFile("quickSortMedian3.txt");
         clearFile("quickSortWith1Element.txt");
+        clearFile("quickSortRandomPivot.txt");
 
         int[] input = {100000};
         int counter = 0;
@@ -24,9 +25,11 @@ public class Main {
             counter++;
             quickSortUsingFirstElementPivot(i);
             System.out.println();
-            insertionSort(i);
-            System.out.println();
             quickSortMedianPivot(i);
+            System.out.println();
+            quickSortRandomPivot(i);
+            System.out.println();
+            insertionSort(i);
         }
     }
 
@@ -45,7 +48,6 @@ public class Main {
         return arr;
     }
 
-
     public static void quickSortUsingFirstElementPivot(int input)throws IOException{
         try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter("quickSortWith1Element.txt", true)))){
             System.out.println("quickSortUsingFirstElementPivot");
@@ -53,12 +55,12 @@ public class Main {
             fileWriter.println("quickSortUsingFirstElementPivot");
             fileWriter.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
             
-            QuickSort qs = new QuickSort();
             long totalRunningTimeIterative = 0;
             long totalRunningTimeRecursion = 0;
             
 
             for (int i = 0; i < 10; i++) {
+                QuickSort qs = new QuickSort();
                 // Iterative
                 int[] arr = fileReader(file, input);
                 long startTimeIterative = System.currentTimeMillis();
@@ -102,11 +104,11 @@ public class Main {
             System.out.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
             fileWriter.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
 
-            QuickSortMedian3 qs = new QuickSortMedian3();
             long totalRunningTimeIterative = 0;
             long totalRunningTimeRecursion = 0;
 
             for (int i = 0; i < 10; i++) {
+                QuickSortMedian3 qs = new QuickSortMedian3();
                 // Iterative
                 int[] arr = fileReader(file, input);
                 long startTimeIterative = System.currentTimeMillis();
@@ -142,6 +144,52 @@ public class Main {
 
     }
 
+    public static void quickSortRandomPivot(int input) throws IOException{
+        try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter("quickSortRandomPivot.txt", true)))){
+            System.out.println("quickSortRandomPivot");
+            fileWriter.println("quickSortRandomPivot");
+
+            System.out.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
+            fileWriter.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
+            
+            long totalRunningTimeIterative = 0;
+            long totalRunningTimeRecursion = 0;
+
+            for (int i = 0; i < 10; i++) {
+                QuickSortRandomPivot qs = new QuickSortRandomPivot();
+                // Iterative
+                int[] arr = fileReader(file, input);
+                long startTimeIterative = System.currentTimeMillis();
+                qs.quickSortIterative(arr);
+                long currentTimeIterative = System.currentTimeMillis();
+                long runningTimeIterative = currentTimeIterative - startTimeIterative;
+
+                // Recursion
+                int[] arrRecur = fileReader(file, input);
+                long startTimeRecursion = System.currentTimeMillis();
+                try {
+                    qs.quickSortRec(arrRecur);
+                    long currentTimeRecursion = System.currentTimeMillis();
+                    long runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
+
+                    System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "Success");
+                    fileWriter.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "Success");
+
+                    totalRunningTimeIterative += runningTimeIterative;
+                    totalRunningTimeRecursion += runningTimeRecursion;
+
+                } catch (StackOverflowError e) {
+                    System.out.printf("%-5d%-25d%-20s%-25s\n", (i + 1), runningTimeIterative, "", "Stack Overflow");
+                    fileWriter.printf("%-5d%-25d%-20s%-25s\n", (i + 1), runningTimeIterative, "", "Stack Overflow");
+                }
+            }
+
+            System.out.println("Average running time iterative: " + totalRunningTimeIterative / 10.0);
+            System.out.println("Average running time recursion: " + totalRunningTimeRecursion / 10.0);
+            fileWriter.println("Average running time iterative: " + totalRunningTimeIterative / 10.0);
+            fileWriter.println("Average running time recursion: " + totalRunningTimeRecursion / 10.0);
+        }
+    }
 
     public static void insertionSort(int input) throws IOException{
         try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter("insertionSort.txt", true)))){
@@ -150,11 +198,12 @@ public class Main {
             fileWriter.println("insertionSort");
             fileWriter.printf("%-5s%-25s%-20s%-25s\n", "Run", "Iterative Running Time", "Recursion Running Time", "Recursion Status");
 
-            InsertionSort is = new InsertionSort();
+            
             long totalRunningTimeIterative = 0;
             long totalRunningTimeRecursion = 0;
 
             for (int i = 0; i < 10; i++) {
+                InsertionSort is = new InsertionSort();
                 // Iterative
                 int[] arr = fileReader(file, input);
                 Integer[] arr2 = intArrayToIntegerArray(arr);
@@ -181,15 +230,20 @@ public class Main {
                 }
                 totalRunningTimeIterative += runningTimeIterative;
                 totalRunningTimeRecursion += runningTimeRecursion;
+                System.out.println("Recursions counter: " + is.getCounter());
             }
 
             System.out.println("Average running time iterative: " + totalRunningTimeIterative / 10.0);
             System.out.println("Average running time recursion: " + totalRunningTimeRecursion / 10.0);
+            
+
             fileWriter.println("Average running time iterative: " + totalRunningTimeIterative / 10.0);
             fileWriter.println("Average running time recursion: " + totalRunningTimeRecursion / 10.0);
+            
         }
 
     }
+
 
 
     private static void clearFile(String fileName) throws IOException {
