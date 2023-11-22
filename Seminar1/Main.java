@@ -16,8 +16,9 @@ public class Main {
         clearFile("quickSortMedian3.txt");
         clearFile("quickSortWith1Element.txt");
         clearFile("quickSortRandomPivot.txt");
+        clearFile("BinarySearch.txt");
 
-        int[] input = {100000};
+        int[] input = {100};
         int counter = 0;
         for(int i : input){
             System.out.println();
@@ -30,7 +31,11 @@ public class Main {
             quickSortRandomPivot(i);
             System.out.println();
             insertionSort(i);
+            System.out.println();
+            int[] arr = fileReader(file, i);
+            binarySearch(arr, 32);
         }
+
     }
 
 
@@ -245,6 +250,33 @@ public class Main {
     }
 
 
+    public static boolean binarySearch(int[] arr, int num) throws IOException{
+        try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter("BinarySearch.txt", true)))){
+            BinarySearch bs = new BinarySearch();
+            QuickSortRandomPivot qs = new QuickSortRandomPivot();
+            qs.quickSortRec(arr);
+
+            int low = arr[0];
+            int high = arr[arr.length - 1];
+
+            System.out.println(num);
+            fileWriter.println("Number to search: " + num);
+
+            
+            long startTime = System.currentTimeMillis();
+            boolean search = bs.binarySearch(arr, low, high, num) != -1;
+            long currentTime = System.currentTimeMillis();
+
+            System.out.println("Element Found: " + search);
+            fileWriter.println("Element Found: " + search);
+            long runningTime = currentTime - startTime;
+            System.out.println("Running Time: " + runningTime);
+            fileWriter.println("Running time: " + runningTime);
+            return search;
+        }
+    }
+
+
 
     private static void clearFile(String fileName) throws IOException {
         try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter(fileName, false)))) {
@@ -261,5 +293,3 @@ public class Main {
                     .toArray(Integer[]::new);
 }
 }
-
-

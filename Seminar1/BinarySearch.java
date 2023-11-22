@@ -18,12 +18,12 @@ public class BinarySearch {
  
             // If element is smaller than mid, then it can
             // only be present in left subarray
-            if (arr[mid] > x)
+            else if (arr[mid] > x)
                 return binarySearch(arr, l, mid - 1, x);
  
             // Else the element can only be present
-            // in right subarray
-            return binarySearch(arr, mid + 1, r, x);
+            else// in right subarray
+                return binarySearch(arr, mid + 1, r, x);
         }
  
         // We reach here when element is not present in
@@ -33,7 +33,7 @@ public class BinarySearch {
 
 
     // Main driver method
-    /*public static void main(String args[])
+    public static void main(String args[])
     {
  
         // Creating object of above class
@@ -64,6 +64,6 @@ public class BinarySearch {
             // Print statement
             System.out.println("Element found at index "
                                + result);
-    }*/
+    }
     
 }

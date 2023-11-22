@@ -1,14 +1,14 @@
 insertionSort
 Run  Iterative Running Time   Recursion Running TimeRecursion Status         
-1    9945                                         Stack Overflow           
-2    11714                                        Stack Overflow           
-3    11807                                        Stack Overflow           
-4    12013                                        Stack Overflow           
-5    15226                                        Stack Overflow           
-6    15393                                        Stack Overflow           
-7    16122                                        Stack Overflow           
-8    12972                                        Stack Overflow           
-9    11877                                        Stack Overflow           
-10   11923                                        Stack Overflow           
-Average running time iterative: 12899.2
-Average running time recursion: 0.0
+1    0                        0                   Success                  
+2    0                        0                   Success                  
+3    0                        0                   Success                  
+4    0                        0                   Success                  
+5    0                        0                   Success                  
+6    0                        1                   Success                  
+7    0                        0                   Success                  
+8    0                        0                   Success                  
+9    1                        0                   Success                  
+10   0                        1                   Success                  
+Average running time iterative: 0.1
+Average running time recursion: 0.2

@@ -1,14 +1,14 @@
 quickSortUsingFirstElementPivot
 Run  Iterative Running Time   Recursion Running TimeRecursion Status         
-1    66                       32                  Success                  
-2    57                       31                  Success                  
-3    34                       33                  Success                  
-4    34                       30                  Success                  
-5    32                       26                  Success                  
-6    27                       26                  Success                  
-7    30                       27                  Success                  
-8    31                       30                  Success                  
-9    26                       25                  Success                  
-10   28                       28                  Success                  
-Average running time iterative: 36.5
-Average running time recursion: 28.8
+1    0                        0                   Success                  
+2    0                        0                   Success                  
+3    0                        0                   Success                  
+4    0                        0                   Success                  
+5    0                        0                   Success                  
+6    0                        0                   Success                  
+7    0                        0                   Success                  
+8    0                        0                   Success                  
+9    0                        0                   Success                  
+10   0                        0                   Success                  
+Average running time iterative: 0.0
+Average running time recursion: 0.0
