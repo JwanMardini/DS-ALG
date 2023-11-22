@@ -1,0 +1,3 @@
+Number to search: 32
+Element Found: false
+Running time: 0

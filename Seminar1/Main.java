@@ -18,7 +18,7 @@ public class Main {
         clearFile("quickSortRandomPivot.txt");
         clearFile("BinarySearch.txt");
 
-        int[] input = {100};
+        int[] input = {100000};
         int counter = 0;
         for(int i : input){
             System.out.println();

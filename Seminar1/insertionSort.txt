@@ -1,14 +1,14 @@
 insertionSort
 Run  Iterative Running Time   Recursion Running TimeRecursion Status         
-1    0                        0                   Success                  
-2    0                        0                   Success                  
-3    0                        0                   Success                  
-4    0                        0                   Success                  
-5    0                        0                   Success                  
-6    0                        1                   Success                  
-7    0                        0                   Success                  
-8    0                        0                   Success                  
-9    1                        0                   Success                  
-10   0                        1                   Success                  
-Average running time iterative: 0.1
-Average running time recursion: 0.2
+1    20320                    7100                Success                  
+2    18506                    1480                Success                  
+3    7818                     3561                Success                  
+4    9452                     1394                Success                  
+5    8246                     1028                Success                  
+6    8151                     1055                Success                  
+7    7482                     964                 Success                  
+8    6976                     955                 Success                  
+9    7218                     969                 Success                  
+10   7233                     967                 Success                  
+Average running time iterative: 10140.2
+Average running time recursion: 1947.3
