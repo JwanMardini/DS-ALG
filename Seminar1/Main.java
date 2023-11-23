@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import java.util.stream.IntStream;
 
 public class Main {
-    private static File file = new File("./FileWithRandomNumbers.txt");
+    private static final File file = new File("./FileWithRandomNumbers.txt");
     
 
     public static void main(String[] args) throws IOException {
@@ -18,7 +18,7 @@ public class Main {
         clearFile("quickSortRandomPivot.txt");
         clearFile("BinarySearch.txt");
 
-        int[] input = {100000};
+        int[] input = {1000000};
         int counter = 0;
         for(int i : input){
             System.out.println();

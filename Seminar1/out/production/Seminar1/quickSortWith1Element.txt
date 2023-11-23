@@ -1,0 +1,14 @@
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running TimeRecursion Status         
+1    2610                     2327                Success                  
+2    2868                     2357                Success                  
+3    3142                     2233                Success                  
+4    2667                     2058                Success                  
+5    2663                     2150                Success                  
+6    2691                     2050                Success                  
+7    2680                     2076                Success                  
+8    2666                     2059                Success                  
+9    2714                     2086                Success                  
+10   2678                     2167                Success                  
+Average running time iterative: 2737.9
+Average running time recursion: 2156.3
