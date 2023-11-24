@@ -1,8 +1,44 @@
 Number to search: 100
 Not Found
-Running time: 5500
+Running time: 11800
 
 Number to search: 100
 Not Found
-Running time: 1800
+Running time: 2800
+
+Number to search: 100
+Not Found
+Running time: 5400
+
+Number to search: 100
+Not Found
+Running time: 2000
+
+Number to search: 100
+Not Found
+Running time: 1700
+
+Number to search: 100
+Not Found
+Running time: 2200
+
+Number to search: 100
+Not Found
+Running time: 2900
+
+Number to search: 100
+Not Found
+Running time: 2800
+
+Number to search: 100
+Not Found
+Running time: 2600
+
+Number to search: 100
+Not Found
+Running time: 3600
+
+Number to search: 100
+Not Found
+Running time: 2400
 

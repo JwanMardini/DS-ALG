@@ -1,3 +1,8 @@
-Number to search: 99
-Element Found: false
-Running time: 0
+Number to search: 100
+Not Found
+Running time: 5500
+
+Number to search: 100
+Not Found
+Running time: 1800
+

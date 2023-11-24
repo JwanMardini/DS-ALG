@@ -1,32 +1,176 @@
 Input size: 100
 quickSortUsingFirstElementPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    534100                   24600                      Success           
-2    165200                   31100                      Success           
-3    90700                    21600                      Success           
-4    92400                    35400                      Success           
-5    50000                    21700                      Success           
-6    59300                    6200                       Success           
-7    57200                    6800                       Success           
-8    64500                    6400                       Success           
-9    36300                    6200                       Success           
-10   52300                    6300                       Success           
-Average running time iterative: 120200.0
-Average running time recursion: 16630.0
+1    1168800                  72600                      Success           
+2    219800                   61400                      Success           
+3    238700                   67700                      Success           
+4    310400                   46100                      Success           
+5    243600                   64400                      Success           
+6    371800                   17200                      Success           
+7    188100                   20100                      Success           
+8    101300                   354300                     Success           
+9    107300                   16900                      Success           
+10   98700                    16000                      Success           
+Average running time iterative: 304850.0
+Average running time recursion: 73670.0
 
-Input size: 200
+Input size: 500
 quickSortUsingFirstElementPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    72200                    15200                      Success           
-2    114000                   13200                      Success           
-3    100000                   28500                      Success           
-4    116300                   16900                      Success           
-5    61100                    23500                      Success           
-6    107800                   7100                       Success           
-7    101100                   10600                      Success           
-8    74800                    9700                       Success           
-9    67200                    7800                       Success           
-10   55800                    7600                       Success           
-Average running time iterative: 87030.0
-Average running time recursion: 14010.0
+1    496400                   122000                     Success           
+2    514200                   111300                     Success           
+3    649500                   115500                     Success           
+4    543500                   104900                     Success           
+5    455400                   103200                     Success           
+6    460100                   48000                      Success           
+7    310600                   101900                     Success           
+8    329100                   47000                      Success           
+9    356200                   50700                      Success           
+10   337500                   63800                      Success           
+Average running time iterative: 445250.0
+Average running time recursion: 86830.0
+
+Input size: 1000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    817800                   182400                     Success           
+2    874500                   93900                      Success           
+3    416000                   88300                      Success           
+4    659800                   90900                      Success           
+5    869000                   303900                     Success           
+6    666600                   91600                      Success           
+7    655700                   94300                      Success           
+8    633500                   95500                      Success           
+9    668300                   94600                      Success           
+10   1062500                  80600                      Success           
+Average running time iterative: 732370.0
+Average running time recursion: 121600.0
+
+Input size: 5000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    2435700                  574900                     Success           
+2    2417200                  572100                     Success           
+3    5833700                  1297400                    Success           
+4    5615300                  596100                     Success           
+5    7833500                  590800                     Success           
+6    6322700                  1311000                    Success           
+7    6243700                  675100                     Success           
+8    5009900                  520500                     Success           
+9    4383000                  651800                     Success           
+10   3989300                  1040300                    Success           
+Average running time iterative: 5008400.0
+Average running time recursion: 783000.0
+
+Input size: 10000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    4217600                  1250200                    Success           
+2    2418400                  1468900                    Success           
+3    3770200                  950200                     Success           
+4    2538900                  1858000                    Success           
+5    4567900                  1502200                    Success           
+6    5058300                  2996500                    Success           
+7    4751300                  1566400                    Success           
+8    4050700                  1683400                    Success           
+9    2736200                  1506500                    Success           
+10   2966600                  1439500                    Success           
+Average running time iterative: 3707610.0
+Average running time recursion: 1622180.0
+
+Input size: 50000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    19778500                 13441800                   Success           
+2    19365600                 12392800                   Success           
+3    10931400                 9302800                    Success           
+4    11293400                 10212500                   Success           
+5    12166500                 13526100                   Success           
+6    15286900                 10880800                   Success           
+7    13928900                 10845800                   Success           
+8    18487600                 14435400                   Success           
+9    14275600                 11003900                   Success           
+10   12462800                 13724200                   Success           
+Average running time iterative: 1.479772E7
+Average running time recursion: 1.197661E7
+
+Input size: 100000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    28906400                 28183900                   Success           
+2    31682000                 26749300                   Success           
+3    27163900                 28048200                   Success           
+4    31167800                 30863300                   Success           
+5    33276300                 30059300                   Success           
+6    31223100                 29333800                   Success           
+7    28026600                 25500900                   Success           
+8    25993700                 27586600                   Success           
+9    29570300                 26468400                   Success           
+10   33792300                 36952100                   Success           
+Average running time iterative: 3.008024E7
+Average running time recursion: 2.897458E7
+
+Input size: 300000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    218529700                226439500                  Success           
+2    233462600                217548800                  Success           
+3    213882000                235087700                  Success           
+4    246100700                238122700                  Success           
+5    226176900                248874200                  Success           
+6    238057800                225810600                  Success           
+7    324479100                263462000                  Success           
+8    376389300                278269000                  Success           
+9    272656100                277458100                  Success           
+10   272995100                259185500                  Success           
+Average running time iterative: 2.6227293E8
+Average running time recursion: 2.4702581E8
+
+Input size: 500000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    573146500                559610100                  Success           
+2    568849100                546600300                  Success           
+3    621647200                568002700                  Success           
+4    560676000                549413200                  Success           
+5    594235500                540152400                  Success           
+6    559601200                546054000                  Success           
+7    545371800                557384000                  Success           
+8    546194200                546533600                  Success           
+9    554345700                543249200                  Success           
+10   550329000                547650700                  Success           
+Average running time iterative: 5.6743962E8
+Average running time recursion: 5.5046502E8
+
+Input size: 700000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    1197300400               1199605000                 Success           
+2    1154422900               1090054700                 Success           
+3    1104358200               1216268400                 Success           
+4    1101562400               1082429200                 Success           
+5    1123499100               1098038100                 Success           
+6    1141244400               1118175100                 Success           
+7    1422586300               1289413800                 Success           
+8    1236051000               1152056100                 Success           
+9    1161140400               1112939800                 Success           
+10   1115878900               1110358900                 Success           
+Average running time iterative: 1.1758044E9
+Average running time recursion: 1.14693391E9
+
+Input size: 1000000
+quickSortUsingFirstElementPivot
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    2211603000               2197079500                 Success           
+2    2174900000               2131486000                 Success           
+3    2140492200               2096442800                 Success           
+4    2144047300               2137572400                 Success           
+5    2182803800               2070796000                 Success           
+6    2129213000               2104775800                 Success           
+7    2117706400               2134083400                 Success           
+8    2244995400               2129038000                 Success           
+9    2115702400               2111563300                 Success           
+10   2125010200               2111697400                 Success           
+Average running time iterative: 2.15864737E9
+Average running time recursion: 2.12245346E9
 

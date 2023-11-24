@@ -19,7 +19,7 @@ public class Main {
         clearFile("quickSortRandomPivot.txt");
         clearFile("BinarySearch.txt");
 
-        int[] input = {100, 200};
+        int[] input = {100, 500, 1000, 5000, 10000, 50000, 100000, 300000, 500000, 700000, 1000000};
         for(int i : input){
             System.out.println();
             System.out.println("Input size: " + i);
