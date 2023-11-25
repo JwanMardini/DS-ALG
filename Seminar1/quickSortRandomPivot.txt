@@ -1,176 +1,112 @@
-Input size: 100
-quickSortRandomPivot
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    1083900                  258400                     Success           
-2    285800                   199600                     Success           
-3    524900                   159400                     Success           
-4    194900                   74300                      Success           
-5    113300                   94300                      Success           
-6    111000                   21800                      Success           
-7    138000                   37200                      Success           
-8    110000                   40600                      Success           
-9    114100                   37800                      Success           
-10   116700                   42800                      Success           
-Average running time iterative: 279260.0
-Average running time recursion: 96620.0
-
-Input size: 500
-quickSortRandomPivot
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    459700                   209700                     Success           
-2    487200                   217700                     Success           
-3    1163700                  158900                     Success           
-4    507200                   245400                     Success           
-5    441300                   181500                     Success           
-6    455000                   162700                     Success           
-7    550500                   152800                     Success           
-8    275300                   105000                     Success           
-9    664000                   181100                     Success           
-10   614000                   153100                     Success           
-Average running time iterative: 561790.0
-Average running time recursion: 176790.0
-
 Input size: 1000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    838000                   239900                     Success           
-2    2421100                  193200                     Success           
-3    810300                   184300                     Success           
-4    819300                   199200                     Success           
-5    762900                   183400                     Success           
-6    744700                   196400                     Success           
-7    1235500                  198400                     Success           
-8    728800                   167100                     Success           
-9    1167100                  169500                     Success           
-10   982600                   164200                     Success           
-Average running time iterative: 1051030.0
-Average running time recursion: 189560.0
+1    1                        0                          Success           
+2    0                        0                          Success           
+3    1                        0                          Success           
+4    1                        0                          Success           
+5    1                        0                          Success           
+6    0                        1                          Success           
+7    1                        0                          Success           
+8    0                        0                          Success           
+9    0                        0                          Success           
+10   1                        0                          Success           
+Average running time iterative: 0.6
+Average running time recursion: 0.1
 
 Input size: 5000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    4894600                  801900                     Success           
-2    4753300                  840500                     Success           
-3    3047700                  978000                     Success           
-4    4319300                  976900                     Success           
-5    4134200                  805900                     Success           
-6    4441100                  1383100                    Success           
-7    4035400                  1382100                    Success           
-8    6232700                  1635400                    Success           
-9    6271500                  3138900                    Success           
-10   6299000                  1538200                    Success           
-Average running time iterative: 4842880.0
-Average running time recursion: 1348090.0
+1    3                        1                          Success           
+2    1                        1                          Success           
+3    2                        0                          Success           
+4    1                        0                          Success           
+5    2                        1                          Success           
+6    1                        1                          Success           
+7    2                        1                          Success           
+8    1                        0                          Success           
+9    2                        1                          Success           
+10   1                        0                          Success           
+Average running time iterative: 1.6
+Average running time recursion: 0.6
 
 Input size: 10000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    5952600                  2869800                    Success           
-2    5501600                  1945300                    Success           
-3    6281200                  2870600                    Success           
-4    5061100                  2649000                    Success           
-5    5238900                  2808200                    Success           
-6    4478400                  2217400                    Success           
-7    5538400                  2802600                    Success           
-8    5170200                  2824500                    Success           
-9    6238000                  2804800                    Success           
-10   4032600                  2145200                    Success           
-Average running time iterative: 5349300.0
-Average running time recursion: 2593740.0
+1    4                        2                          Success           
+2    3                        2                          Success           
+3    3                        2                          Success           
+4    4                        1                          Success           
+5    2                        2                          Success           
+6    4                        2                          Success           
+7    4                        2                          Success           
+8    4                        1                          Success           
+9    3                        2                          Success           
+10   5                        2                          Success           
+Average running time iterative: 3.6
+Average running time recursion: 1.8
 
 Input size: 50000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    48909200                 21607000                   Success           
-2    40421800                 18691900                   Success           
-3    38627300                 21355800                   Success           
-4    44691000                 21230600                   Success           
-5    34144200                 22978100                   Success           
-6    45685300                 21391600                   Success           
-7    39437900                 22300300                   Success           
-8    42625500                 26666400                   Success           
-9    40656500                 21679800                   Success           
-10   39733000                 24512500                   Success           
-Average running time iterative: 4.149317E7
-Average running time recursion: 2.22414E7
+1    69                       32                         Success           
+2    73                       36                         Success           
+3    70                       31                         Success           
+4    67                       32                         Success           
+5    66                       35                         Success           
+6    65                       36                         Success           
+7    67                       36                         Success           
+8    66                       32                         Success           
+9    70                       36                         Success           
+10   67                       38                         Success           
+Average running time iterative: 68.0
+Average running time recursion: 34.4
 
 Input size: 100000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    105453700                60813200                   Success           
-2    124819800                58004900                   Success           
-3    103263400                59383200                   Success           
-4    115332100                69891000                   Success           
-5    128800000                69506900                   Success           
-6    128960400                56675200                   Success           
-7    110674400                55918700                   Success           
-8    105912200                63532900                   Success           
-9    110391600                55213900                   Success           
-10   111505400                55544300                   Success           
-Average running time iterative: 1.145113E8
-Average running time recursion: 6.044842E7
-
-Input size: 300000
-quickSortRandomPivot
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    952146400                467350200                  Success           
-2    1000229500               467164900                  Success           
-3    983218100                448175400                  Success           
-4    969529000                432421900                  Success           
-5    943274500                415751300                  Success           
-6    872460300                454921800                  Success           
-7    1092227100               427132000                  Success           
-8    984350700                462509900                  Success           
-9    1086621900               564626400                  Success           
-10   1042117400               448729600                  Success           
-Average running time iterative: 9.9261749E8
-Average running time recursion: 4.5887834E8
+1    307                      155                        Success           
+2    332                      158                        Success           
+3    289                      161                        Success           
+4    281                      150                        Success           
+5    309                      152                        Success           
+6    290                      137                        Success           
+7    290                      139                        Success           
+8    425                      157                        Success           
+9    311                      154                        Success           
+10   344                      159                        Success           
+Average running time iterative: 317.8
+Average running time recursion: 152.2
 
 Input size: 500000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    2517608600               1124912600                 Success           
-2    2474484200               1109587200                 Success           
-3    2482694400               1096422800                 Success           
-4    2535328700               1095168800                 Success           
-5    2457097300               1092465000                 Success           
-6    2507805600               1811255600                 Success           
-7    2452380400               2059325400                 Success           
-8    2668364000               2122440800                 Success           
-9    2514542700               1907017300                 Success           
-10   2460730400               1852019900                 Success           
-Average running time iterative: 2.50710363E9
-Average running time recursion: 1.52706154E9
-
-Input size: 700000
-quickSortRandomPivot
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    5034715100               3713514900                 Success           
-2    4995660100               3770170500                 Success           
-3    5129331200               3781481900                 Success           
-4    5036112600               4360089300                 Success           
-5    5178394100               3740141500                 Success           
-6    4984476600               3737593400                 Success           
-7    5169820500               3741728500                 Success           
-8    5048527500               3855219200                 Success           
-9    5040665300               3788750700                 Success           
-10   5014732600               3670297500                 Success           
-Average running time iterative: 5.06324356E9
-Average running time recursion: 3.81589874E9
+1    7991                     4386                       Success           
+2    7230                     6064                       Success           
+3    7566                     5774                       Success           
+4    8950                     6765                       Success           
+5    8231                     6478                       Success           
+6    8145                     6339                       Success           
+7    8140                     6196                       Success           
+8    7723                     6089                       Success           
+9    7571                     6597                       Success           
+10   7688                     6680                       Success           
+Average running time iterative: 7923.5
+Average running time recursion: 6136.8
 
 Input size: 1000000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    9609254000               7164884500                 Success           
-2    9539038600               7342868100                 Success           
-3    9976329400               7117004900                 Success           
-4    9490013900               7103833600                 Success           
-5    9521713500               7113181800                 Success           
-6    9630954500               7484780400                 Success           
-7    9663580700               7096058500                 Success           
-8    9563645500               7093567900                 Success           
-9    9534941500               7134859800                 Success           
-10   9655005000               7651042900                 Success           
-Average running time iterative: 9.61844766E9
-Average running time recursion: 7.23020824E9
+1    29959                    22444                      Success           
+2    29297                    22976                      Success           
+3    29731                    22410                      Success           
+4    29499                    22813                      Success           
+5    29339                    22238                      Success           
+6    29179                    22801                      Success           
+7    28978                    22390                      Success           
+8    29526                    22825                      Success           
+9    28973                    22312                      Success           
+10   29687                    22632                      Success           
+Average running time iterative: 29416.8
+Average running time recursion: 22584.1
 

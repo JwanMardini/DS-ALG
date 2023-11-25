@@ -1,32 +1,16 @@
-Input size: 100
+Input size: 100000
 quickSortRandomPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    406100                   99000                      Success           
-2    340400                   72000                      Success           
-3    169600                   84100                      Success           
-4    78500                    54800                      Success           
-5    104700                   28900                      Success           
-6    77700                    13300                      Success           
-7    47800                    44500                      Success           
-8    48400                    15100                      Success           
-9    40600                    12600                      Success           
-10   62500                    23400                      Success           
-Average running time iterative: 137630.0
-Average running time recursion: 44770.0
-
-Input size: 200
-quickSortRandomPivot
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    70400                    25500                      Success           
-2    112600                   54600                      Success           
-3    129700                   52700                      Success           
-4    72200                    24100                      Success           
-5    60000                    19200                      Success           
-6    54200                    19700                      Success           
-7    53200                    33700                      Success           
-8    71300                    29900                      Success           
-9    61300                    20900                      Success           
-10   147900                   19600                      Success           
-Average running time iterative: 83280.0
-Average running time recursion: 29990.0
+1    155                      134                        Success           
+2    254                      145                        Success           
+3    285                      147                        Success           
+4    279                      145                        Success           
+5    319                      168                        Success           
+6    286                      148                        Success           
+7    311                      150                        Success           
+8    306                      138                        Success           
+9    289                      150                        Success           
+10   296                      158                        Success           
+Average running time iterative: 278.0
+Average running time recursion: 148.3
 

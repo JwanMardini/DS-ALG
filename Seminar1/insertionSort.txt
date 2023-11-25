@@ -1,176 +1,112 @@
-Input size: 100
-insertionSort
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    613600                   415900                     Success           
-2    1153200                  65400                      Success           
-3    316400                   28100                      Success           
-4    399700                   25300                      Success           
-5    280200                   33300                      Success           
-6    278100                   25000                      Success           
-7    269100                   30500                      Success           
-8    303600                   47300                      Success           
-9    246100                   25000                      Success           
-10   254700                   27200                      Success           
-Average running time iterative: 411470.0
-Average running time recursion: 72300.0
-
-Input size: 500
-insertionSort
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    5635500                  88600                      Success           
-2    2881300                  71500                      Success           
-3    2769100                  73400                      Success           
-4    3047200                  68900                      Success           
-5    1793800                  97700                      Success           
-6    6688300                  71900                      Success           
-7    2345300                  69600                      Success           
-8    3268400                  62500                      Success           
-9    7183700                  63600                      Success           
-10   9956400                  136300                     Success           
-Average running time iterative: 4556900.0
-Average running time recursion: 80400.0
-
 Input size: 1000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    3643600                  234400                     Success           
-2    3328600                  207200                     Success           
-3    2731200                  499300                     Success           
-4    2927100                  398800                     Success           
-5    3025400                  182300                     Success           
-6    3221300                  249000                     Success           
-7    2161500                  207600                     Success           
-8    3560500                  247000                     Success           
-9    3125500                  1847100                    Success           
-10   6095200                  257800                     Success           
-Average running time iterative: 3381990.0
-Average running time recursion: 433050.0
+1    5                        6                          Success           
+2    11                       0                          Success           
+3    3                        0                          Success           
+4    1                        0                          Success           
+5    1                        0                          Success           
+6    1                        0                          Success           
+7    1                        0                          Success           
+8    1                        0                          Success           
+9    1                        0                          Success           
+10   1                        0                          Success           
+Average running time iterative: 2.6
+Average running time recursion: 0.6
 
 Input size: 5000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    89898000                 5880200                    Success           
-2    108260400                13447300                   Success           
-3    161505800                6132800                    Success           
-4    92053000                 6296500                    Success           
-5    78287400                 5634100                    Success           
-6    63546500                 5276500                    Success           
-7    87299300                 17879800                   Success           
-8    74964100                 5418100                    Success           
-9    47035500                 4095300                    Success           
-10   65453800                 4697100                    Success           
-Average running time iterative: 8.683038E7
-Average running time recursion: 7475770.0
+1    20                       3                          Success           
+2    20                       3                          Success           
+3    21                       2                          Success           
+4    19                       2                          Success           
+5    24                       2                          Success           
+6    30                       2                          Success           
+7    21                       2                          Success           
+8    21                       2                          Success           
+9    20                       2                          Success           
+10   24                       2                          Success           
+Average running time iterative: 22.0
+Average running time recursion: 2.2
 
 Input size: 10000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    215853300                17420500                   Success           
-2    212358800                17898300                   Success           
-3    189666100                13989200                   Success           
-4    158551700                13312500                   Success           
-5    155611800                14754800                   Success           
-6    144952700                13848100                   Success           
-7    137527200                12803100                   Success           
-8    139222300                13956400                   Success           
-9    148878300                12301500                   Success           
-10   144745900                13867400                   Success           
-Average running time iterative: 1.6473681E8
-Average running time recursion: 1.441518E7
+1    88                       10                         Success           
+2    109                      10                         Success           
+3    93                       9                          Success           
+4    94                       10                         Success           
+5    99                       12                         Success           
+6    111                      9                          Success           
+7    112                      12                         Success           
+8    249                      9                          Success           
+9    93                       10                         Success           
+10   101                      9                          Success           
+Average running time iterative: 114.9
+Average running time recursion: 10.0
 
 Input size: 50000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    4064493600               372736000                  Success           
-2    3950401100               320470600                  Success           
-3    3497975700               306711400                  Success           
-4    3483449900               341644600                  Success           
-5    4215510600               346798000                  Success           
-6    3423103700               368638600                  Success           
-7    2897798400               251270700                  Success           
-8    2544193600               240797800                  Success           
-9    2978675800               276277300                  Success           
-10   3251600200               284498900                  Success           
-Average running time iterative: 3.43072026E9
-Average running time recursion: 3.1098439E8
+1    2168                     223                        Success           
+2    2103                     215                        Success           
+3    2274                     235                        Success           
+4    2176                     204                        Success           
+5    2193                     227                        Success           
+6    2431                     227                        Success           
+7    2583                     267                        Success           
+8    2162                     208                        Success           
+9    2234                     219                        Success           
+10   2189                     287                        Success           
+Average running time iterative: 2251.3
+Average running time recursion: 231.2
 
 Input size: 100000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    10697589600              982316300                  Success           
-2    10887730100              1352377100                 Success           
-3    11200325800              1011967100                 Success           
-4    10963907600              1129482400                 Success           
-5    11870238000              1107589500                 Success           
-6    12939575000              1492522600                 Success           
-7    15671226100              1317182500                 Success           
-8    14005807600              1273377100                 Success           
-9    16182466000              1473159700                 Success           
-10   11773229300              995907100                  Success           
-Average running time iterative: 1.261920951E10
-Average running time recursion: 1.21358814E9
-
-Input size: 300000
-insertionSort
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    102789785900             9483557900                 Success           
-2    102750341000             10213700300                Success           
-3    100063429500             9415933300                 Success           
-4    98728900200              9424843900                 Success           
-5    98146557000              10090989200                Success           
-6    97570976600              8970431000                 Success           
-7    97838120200              9789105200                 Success           
-8    113081909500             9306737900                 Success           
-9    93733877200              8575729100                 Success           
-10   86066311800              8446272600                 Success           
-Average running time iterative: 9.907702089E10
-Average running time recursion: 9.37173004E9
+1    9602                     906                        Success           
+2    9947                     875                        Success           
+3    9435                     949                        Success           
+4    11222                    915                        Success           
+5    9524                     928                        Success           
+6    11242                    1004                       Success           
+7    10263                    919                        Success           
+8    11683                    1119                       Success           
+9    9820                     945                        Success           
+10   10563                    1025                       Success           
+Average running time iterative: 10330.1
+Average running time recursion: 958.5
 
 Input size: 500000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    238752051900             24513907600                Success           
-2    237255464500             24160965200                Success           
-3    236826617100             24022580600                Success           
-4    245862258700             25664883700                Success           
-5    260591576200             23789095500                Success           
-6    240935380200             24019142800                Success           
-7    239761446400             23816148700                Success           
-8    240002702400             24073728700                Success           
-9    241024389200             24065497500                Success           
-10   247167213700             24536565200                Success           
-Average running time iterative: 2.4281791003E11
-Average running time recursion: 2.426625155E10
-
-Input size: 700000
-insertionSort
-Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    1104614086500            50670456500                Success           
-2    1166636400000            63152620100                Success           
-3    1104996672400            46134575100                Success           
-4    1046597359300            50122531300                Success           
-5    1069119426000            47824098600                Success           
-6    1061718848100            46925344000                Success           
-7    975777758500             45855218300                Success           
-8    974601184500             45721345800                Success           
-9    972265592600             45753297000                Success           
-10   971973931800             45627567500                Success           
-Average running time iterative: 1.04483012597E12
-Average running time recursion: 4.877870542E10
+1    258920                   25310                      Success           
+2    259853                   22602                      Success           
+3    225005                   22930                      Success           
+4    237644                   26356                      Success           
+5    247059                   23263                      Success           
+6    248625                   23179                      Success           
+7    231109                   22898                      Success           
+8    230174                   22838                      Success           
+9    228859                   23022                      Success           
+10   226631                   23042                      Success           
+Average running time iterative: 239387.9
+Average running time recursion: 23544.0
 
 Input size: 1000000
 insertionSort
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    1986094556100            92726095200                Success           
-2    1986791717200            93319569700                Success           
-3    1985050807600            92665436600                Success           
-4    2029074155800            93799887600                Success           
-5    1988421176200            92295381000                Success           
-6    1984038656900            92909984600                Success           
-7    2229932921700            115990209800               Success           
-8    2075352801900            92528958300                Success           
-9    1987677301500            92356147200                Success           
-10   1982894630900            93026331400                Success           
-Average running time iterative: 2.02353287258E12
-Average running time recursion: 9.516180014E10
+1    1956418                  90847                      Success           
+2    1964805                  90907                      Success           
+3    1974894                  91541                      Success           
+4    1985217                  90277                      Success           
+5    1954788                  90591                      Success           
+6    1957361                  90260                      Success           
+7    1962460                  90035                      Success           
+8    1959764                  91030                      Success           
+9    1962270                  92010                      Success           
+10   1966820                  91742                      Success           
+Average running time iterative: 1964479.7
+Average running time recursion: 90924.0
 

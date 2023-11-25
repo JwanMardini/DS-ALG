@@ -1,10 +1,4 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 //import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -19,7 +13,7 @@ public class Main {
         clearFile("quickSortRandomPivot.txt");
         clearFile("BinarySearch.txt");
 
-        int[] input = {100, 500, 1000, 5000, 10000, 50000, 100000, 300000, 500000, 700000, 1000000};
+        int[] input = {1000, 5000, 10000, 50000, 100000, 500000, 1000000};
         for(int i : input){
             System.out.println();
             System.out.println("Input size: " + i);
@@ -52,6 +46,25 @@ public class Main {
         return arr;
     }
 
+    private static int[] randomFileReader(File file, int elementNum) throws IOException {
+        int[] arr = new int[elementNum];
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r")) {
+            for (int i = 0; i < elementNum; i++) {
+                long randomPosition = (long) (Math.random() * randomAccessFile.length());
+                randomAccessFile.seek(randomPosition);
+                String line = randomAccessFile.readLine();
+                if (line != null && !line.trim().isEmpty()) {
+                    arr[i] = Integer.parseInt(line.trim());
+                } else {
+                    // Handle the case where the end of the file is reached
+                    // or an empty line is encountered
+                    i--; // Retry for the current index
+                }
+            }
+        }
+        return arr;
+    }
+
     public static void quickSortUsingFirstElementPivot(int input)throws IOException{
         try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter("quickSortWith1Element.txt", true)))){
             System.out.println("Input size: " + input);
@@ -68,18 +81,18 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 QuickSort qs = new QuickSort();
                 // Iterative
-                int[] arr = fileReader(file, input);
-                long startTimeIterative = System.nanoTime();
+                int[] arr = randomFileReader(file, input);
+                long startTimeIterative = System.currentTimeMillis();
                 qs.quickSortIterativeWithFirstElementPivot(arr);
-                long currentTimeIterative = System.nanoTime();
+                long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = fileReader(file, input);
-                long startTimeRecursion = System.nanoTime();
+                int[] arrRecur = randomFileReader(file, input);
+                long startTimeRecursion = System.currentTimeMillis();
                 try {
                     qs.quickSortRecursiveWithFirstElementPivot(arrRecur);
-                    long currentTimeRecursion = System.nanoTime();
+                    long currentTimeRecursion = System.currentTimeMillis();
                     long runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
 
                     System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "       Success");
@@ -119,18 +132,18 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 QuickSortMedian3 qs = new QuickSortMedian3();
                 // Iterative
-                int[] arr = fileReader(file, input);
-                long startTimeIterative = System.nanoTime();
+                int[] arr = randomFileReader(file, input);
+                long startTimeIterative = System.currentTimeMillis();
                 qs.quickSortIterativeWithMedian3Pivot(arr);
-                long currentTimeIterative = System.nanoTime();
+                long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = fileReader(file, input);
-                long startTimeRecursion = System.nanoTime();
+                int[] arrRecur = randomFileReader(file, input);
+                long startTimeRecursion = System.currentTimeMillis();
                 try {
                     qs.quickSortRecursiveWithMedian3Pivot(arrRecur);
-                    long currentTimeRecursion = System.nanoTime();
+                    long currentTimeRecursion = System.currentTimeMillis();
                     long runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
 
                     System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "       Success");
@@ -170,18 +183,18 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 QuickSortRandomPivot qs = new QuickSortRandomPivot();
                 // Iterative
-                int[] arr = fileReader(file, input);
-                long startTimeIterative = System.nanoTime();
+                int[] arr = randomFileReader(file, input);
+                long startTimeIterative = System.currentTimeMillis();
                 qs.quickSortIterative(arr);
-                long currentTimeIterative = System.nanoTime();
+                long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = fileReader(file, input);
-                long startTimeRecursion = System.nanoTime();
+                int[] arrRecur = randomFileReader(file, input);
+                long startTimeRecursion = System.currentTimeMillis();
                 try {
                     qs.quickSortRec(arrRecur);
-                    long currentTimeRecursion = System.nanoTime();
+                    long currentTimeRecursion = System.currentTimeMillis();
                     long runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
 
                     System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "       Success");
@@ -220,20 +233,20 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 InsertionSort is = new InsertionSort();
                 // Iterative
-                int[] arr = fileReader(file, input);
+                int[] arr = randomFileReader(file, input);
                 Integer[] arr2 = intArrayToIntegerArray(arr);
-                long startTimeIterative = System.nanoTime();
+                long startTimeIterative = System.currentTimeMillis();
                 is.insertionSort(arr2);
-                long currentTimeIterative = System.nanoTime();
+                long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = fileReader(file, input);
+                int[] arrRecur = randomFileReader(file, input);
                 long runningTimeRecursion = 0;
-                long startTimeRecursion = System.nanoTime();
+                long startTimeRecursion = System.currentTimeMillis();
                 try {
                     is.insertionSortRecursive(arrRecur, arrRecur.length);
-                    long currentTimeRecursion = System.nanoTime();
+                    long currentTimeRecursion = System.currentTimeMillis();
                     runningTimeRecursion = currentTimeRecursion - startTimeRecursion;
 
                     System.out.printf("%-5d%-25d%-20d%-25s\n", (i + 1), runningTimeIterative, runningTimeRecursion, "       Success");
@@ -274,9 +287,9 @@ public class Main {
             fileWriter.println("Number to search: " + num);
 
             
-            long startTime = System.nanoTime();
+            long startTime = System.currentTimeMillis();
             boolean search = bs.binarySearch(arr, low, high, num) == -1;
-            long currentTime = System.nanoTime();
+            long currentTime = System.currentTimeMillis();
             long runningTime = currentTime - startTime;
             //System.out.println(Arrays.toString(arr));
             if (search) {

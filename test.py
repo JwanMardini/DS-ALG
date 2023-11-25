@@ -18,8 +18,8 @@ data = {
         nanoseconds_to_milliseconds(5.06324356E9),
         nanoseconds_to_milliseconds(9.61844766E9),
     ],
-    "R_Median": [
-        nanoseconds_to_milliseconds(1051030.0),
+    "quickSortFirstElementPivot": [
+        nanoseconds_to_milliseconds(189560.0),
         nanoseconds_to_milliseconds(4842880.0),
         nanoseconds_to_milliseconds(5349300.0),
         nanoseconds_to_milliseconds(4.149317E7),
@@ -74,8 +74,6 @@ for column in df.columns[1:]:
 plt.xlabel("Input Size")
 plt.ylabel("Execution Time (Milliseconds)")
 plt.title("Execution Time vs Input Size")
-plt.xscale("linear")
-plt.yscale("linear")
 plt.legend()
 plt.grid(True)
 plt.show()
