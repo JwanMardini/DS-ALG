@@ -1,4 +1,0 @@
-Number to search: 100
-Not Found
-Running time: 0
-

@@ -13,7 +13,7 @@ public class Main {
         clearFile("quickSortRandomPivot.txt");
         clearFile("BinarySearch.txt");
 
-        int[] input = {1000, 5000, 10000, 50000, 100000, 500000, 1000000};
+        int[] input = {200000, 300000, 400000, 600000, 700000, 800000};
         for(int i : input){
             System.out.println();
             System.out.println("Input size: " + i);
@@ -81,14 +81,14 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 QuickSort qs = new QuickSort();
                 // Iterative
-                int[] arr = randomFileReader(file, input);
+                int[] arr = fileReader(file, input);
                 long startTimeIterative = System.currentTimeMillis();
                 qs.quickSortIterativeWithFirstElementPivot(arr);
                 long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = randomFileReader(file, input);
+                int[] arrRecur = fileReader(file, input);
                 long startTimeRecursion = System.currentTimeMillis();
                 try {
                     qs.quickSortRecursiveWithFirstElementPivot(arrRecur);
@@ -132,14 +132,14 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 QuickSortMedian3 qs = new QuickSortMedian3();
                 // Iterative
-                int[] arr = randomFileReader(file, input);
+                int[] arr = fileReader(file, input);
                 long startTimeIterative = System.currentTimeMillis();
                 qs.quickSortIterativeWithMedian3Pivot(arr);
                 long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = randomFileReader(file, input);
+                int[] arrRecur = fileReader(file, input);
                 long startTimeRecursion = System.currentTimeMillis();
                 try {
                     qs.quickSortRecursiveWithMedian3Pivot(arrRecur);
@@ -183,14 +183,14 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 QuickSortRandomPivot qs = new QuickSortRandomPivot();
                 // Iterative
-                int[] arr = randomFileReader(file, input);
+                int[] arr = fileReader(file, input);
                 long startTimeIterative = System.currentTimeMillis();
                 qs.quickSortIterative(arr);
                 long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = randomFileReader(file, input);
+                int[] arrRecur = fileReader(file, input);
                 long startTimeRecursion = System.currentTimeMillis();
                 try {
                     qs.quickSortRec(arrRecur);
@@ -233,7 +233,7 @@ public class Main {
             for (int i = 0; i < 10; i++) {
                 InsertionSort is = new InsertionSort();
                 // Iterative
-                int[] arr = randomFileReader(file, input);
+                int[] arr = fileReader(file, input);
                 Integer[] arr2 = intArrayToIntegerArray(arr);
                 long startTimeIterative = System.currentTimeMillis();
                 is.insertionSort(arr2);
@@ -241,7 +241,7 @@ public class Main {
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
 
                 // Recursion
-                int[] arrRecur = randomFileReader(file, input);
+                int[] arrRecur = fileReader(file, input);
                 long runningTimeRecursion = 0;
                 long startTimeRecursion = System.currentTimeMillis();
                 try {

@@ -1,16 +1,16 @@
-Input size: 100000
+Input size: 200000
 quickSortUsingFirstElementPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    156                      95                         Success           
-2    100                      90                         Success           
-3    153                      130                        Success           
-4    94                       88                         Success           
-5    81                       72                         Success           
-6    82                       78                         Success           
-7    85                       82                         Success           
-8    76                       84                         Success           
-9    77                       83                         Success           
-10   68                       80                         Success           
-Average running time iterative: 97.2
-Average running time recursion: 88.2
+1    458                      357                        Success           
+2    361                      324                        Success           
+3    295                      301                        Success           
+4    245                      294                        Success           
+5    279                      302                        Success           
+6    244                      324                        Success           
+7    259                      310                        Success           
+8    273                      294                        Success           
+9    259                      305                        Success           
+10   280                      280                        Success           
+Average running time iterative: 295.3
+Average running time recursion: 309.1
 

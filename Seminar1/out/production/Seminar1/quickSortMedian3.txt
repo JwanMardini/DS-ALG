@@ -1,16 +1,16 @@
-Input size: 100000
+Input size: 200000
 quickSortMedianPivot
 Run  Iterative Running Time   Recursion Running Time Recursion Status         
-1    70                       72                         Success           
-2    96                       89                         Success           
-3    76                       114                        Success           
-4    61                       104                        Success           
-5    69                       83                         Success           
-6    71                       92                         Success           
-7    60                       85                         Success           
-8    62                       83                         Success           
-9    61                       93                         Success           
-10   61                       87                         Success           
-Average running time iterative: 68.7
-Average running time recursion: 90.2
+1    214                      266                        Success           
+2    209                      281                        Success           
+3    180                      281                        Success           
+4    216                      269                        Success           
+5    176                      262                        Success           
+6    231                      253                        Success           
+7    223                      340                        Success           
+8    265                      272                        Success           
+9    183                      269                        Success           
+10   189                      265                        Success           
+Average running time iterative: 208.6
+Average running time recursion: 275.8
 
