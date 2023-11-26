@@ -1,0 +1,112 @@
+Input size: 1000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    11                       12                         Success           
+2    0                        3                          Success           
+3    1                        1                          Success           
+4    0                        3                          Success           
+5    0                        0                          Success           
+6    0                        0                          Success           
+7    0                        1                          Success           
+8    1                        0                          Success           
+9    0                        0                          Success           
+10   0                        0                          Success           
+Average running time iterative: 1.3
+Average running time recursion: 2.0
+
+Input size: 5000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    4                        4                          Success           
+2    3                        4                          Success           
+3    4                        4                          Success           
+4    3                        3                          Success           
+5    3                        3                          Success           
+6    2                        3                          Success           
+7    4                        4                          Success           
+8    3                        4                          Success           
+9    3                        4                          Success           
+10   4                        5                          Success           
+Average running time iterative: 3.3
+Average running time recursion: 3.8
+
+Input size: 10000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    15                       17                         Success           
+2    15                       15                         Success           
+3    14                       13                         Success           
+4    13                       13                         Success           
+5    13                       11                         Success           
+6    10                       12                         Success           
+7    14                       14                         Success           
+8    14                       17                         Success           
+9    17                       18                         Success           
+10   15                       18                         Success           
+Average running time iterative: 14.0
+Average running time recursion: 14.8
+
+Input size: 50000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    259                      259                        Success           
+2    247                      249                        Success           
+3    229                      253                        Success           
+4    242                      248                        Success           
+5    235                      263                        Success           
+6    252                      269                        Success           
+7    247                      253                        Success           
+8    242                      255                        Success           
+9    239                      252                        Success           
+10   245                      275                        Success           
+Average running time iterative: 243.7
+Average running time recursion: 257.6
+
+Input size: 100000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    995                      1105                       Success           
+2    1071                     1046                       Success           
+3    1014                     1040                       Success           
+4    1011                     1058                       Success           
+5    987                      997                        Success           
+6    1023                     1130                       Success           
+7    1015                     1062                       Success           
+8    1029                     1085                       Success           
+9    999                      1058                       Success           
+10   949                      1059                       Success           
+Average running time iterative: 1009.3
+Average running time recursion: 1064.0
+
+Input size: 500000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    21748                    23480                      Success           
+2    21812                    22818                      Success           
+3    22352                    22800                      Success           
+4    23442                    24099                      Success           
+5    22064                    24050                      Success           
+6    31875                    26411                      Success           
+7    23008                    23231                      Success           
+8    22423                    24604                      Success           
+9    23424                    23269                      Success           
+10   24059                    23334                      Success           
+Average running time iterative: 23620.7
+Average running time recursion: 23809.6
+
+Input size: 1000000
+insertionSort
+Run  Iterative Running Time   Recursion Running Time Recursion Status         
+1    90226                    117581                     Success           
+2    106901                   111736                     Success           
+3    101890                   112981                     Success           
+4    117285                   118675                     Success           
+5    102770                   105953                     Success           
+6    122241                   115782                     Success           
+7    115930                   122494                     Success           
+8    113282                   118143                     Success           
+9    117730                   108496                     Success           
+10   105965                   107727                     Success           
+Average running time iterative: 109422.0
+Average running time recursion: 113956.8
+

@@ -7,15 +7,15 @@ public class Main {
     
 
     public static void main(String[] args) throws IOException {
-        clearFile("insertionSort.txt");
+        /*clearFile("insertionSort.txt");
         clearFile("quickSortMedian3.txt");
         clearFile("quickSortWith1Element.txt");
-        clearFile("quickSortRandomPivot.txt");
+        clearFile("quickSortRandomPivot.txt");*/
         clearFile("BinarySearch.txt");
 
-        int[] input = {200000, 300000, 400000, 600000, 700000, 800000};
+        int[] input = {1000, 5000, 10000, 50000, 100000, 500000, 1000000};
         for(int i : input){
-            System.out.println();
+            /*System.out.println();
             System.out.println("Input size: " + i);
             quickSortUsingFirstElementPivot(i);
             System.out.println();
@@ -24,9 +24,9 @@ public class Main {
             quickSortRandomPivot(i);
             System.out.println();
             insertionSort(i);
-            System.out.println();
+            System.out.println();*/
             int[] arr = fileReader(file, i);
-            binarySearch(arr, 100);
+            binarySearch(arr, 100, i);
         }
 
     }
@@ -234,11 +234,11 @@ public class Main {
                 InsertionSort is = new InsertionSort();
                 // Iterative
                 int[] arr = fileReader(file, input);
-                Integer[] arr2 = intArrayToIntegerArray(arr);
                 long startTimeIterative = System.currentTimeMillis();
-                is.insertionSort(arr2);
+                is.insertionSortIterative(arr);
                 long currentTimeIterative = System.currentTimeMillis();
                 long runningTimeIterative = currentTimeIterative - startTimeIterative;
+
 
                 // Recursion
                 int[] arrRecur = fileReader(file, input);
@@ -274,42 +274,48 @@ public class Main {
     }
 
 
-    public static boolean binarySearch(int[] arr, int num) throws IOException{
+    public static boolean binarySearch(int[] arr, int num, int input) throws IOException{
+        boolean search = false;
         try (PrintWriter fileWriter = new PrintWriter(new BufferedWriter(new FileWriter("BinarySearch.txt", true)))){
-            BinarySearch bs = new BinarySearch();
-            QuickSortRandomPivot qs = new QuickSortRandomPivot();
-            qs.quickSortRec(arr);
 
+            long totalRunningTime = 0;
             int low = arr[0];
             int high = arr[arr.length - 1];
+            for (int i = 0; i < 10; i++) {
+                BinarySearch bs = new BinarySearch();
+                QuickSortMedian3 qs = new QuickSortMedian3();
+                qs.quickSortIterativeWithMedian3Pivot(arr);
+                long startTime = System.nanoTime();
+                search = bs.binarySearch(arr, low, high, num) == -1;
+                long currentTime = System.nanoTime();
+                long runningTime = currentTime - startTime;
+                totalRunningTime += runningTime;
+            }
 
-            System.out.println(num);
+            System.out.println("Input size: " + input);
+            fileWriter.println("Input size: " + input);
+            System.out.println("Number to search: " + num);
             fileWriter.println("Number to search: " + num);
+            System.out.println("Average searching time: " + totalRunningTime/10.0);
+            fileWriter.println("Average searching time: " + totalRunningTime/10.0);
 
-            
-            long startTime = System.currentTimeMillis();
-            boolean search = bs.binarySearch(arr, low, high, num) == -1;
-            long currentTime = System.currentTimeMillis();
-            long runningTime = currentTime - startTime;
-            //System.out.println(Arrays.toString(arr));
+
             if (search) {
                 System.out.println("Not Found");
                 fileWriter.println("Not Found");
+                System.out.println();
+                fileWriter.println();
 
-            }else{
+            } else {
                 System.out.println("Found");
                 fileWriter.println("Found");
+                System.out.println();
+                fileWriter.println();
 
             }
-
-
-
-
-            System.out.println("Running Time : " + runningTime);
-            fileWriter.println("Running time: " + runningTime);
-            fileWriter.println();
             return search;
         }
+
     }
 
 
