@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Stack;
 
 public class QuickSort {
@@ -69,6 +70,16 @@ public class QuickSort {
             }
         }
     
+    }
+
+    public static void main(String[] args) {
+        int[] array = { 7, 2, 1, 6, 8, 5, 3, 4 };
+
+        QuickSort qs = new QuickSort();
+        System.out.println(Arrays.toString(array));
+        qs.quickSortRecursiveWithFirstElementPivot(array);
+        System.out.println(Arrays.toString(array));
+
     }
 }
 

@@ -35,19 +35,23 @@ public class QuickSortMedian3 {
         }
     }
  
-  private static int partition(int[] array, int lowIndex, int highIndex) {
-    int pivot = array[highIndex];
-    int i = (lowIndex - 1);
- 
-    for (int j = lowIndex; j < highIndex; j++) {
-      if (array[j] < pivot) {
-        i++;
-        swap(array, i, j);
-      }
+    private static int partition(int[] array, int lowIndex, int highIndex) {
+        int pivot = medianOfThree(array, lowIndex, highIndex);
+        // Swap the pivot with the last element to simplify the partitioning logic
+        swap(array, pivot, highIndex);
+
+        pivot = array[highIndex];
+        int i = (lowIndex - 1);
+
+        for (int j = lowIndex; j < highIndex; j++) {
+            if (array[j] < pivot) {
+            i++;
+            swap(array, i, j);
+        }
+        }
+        swap(array, i + 1, highIndex);
+        return (i + 1);
     }
-    swap(array, i + 1, highIndex);
-    return (i + 1);
-  }
  
   private static void swap(int[] arr, int i, int j) {
     int temp = arr[i];
@@ -64,23 +68,27 @@ public class QuickSortMedian3 {
     int highIndex = array.length - 1;
     quickSortIterative(array, lowIndex, highIndex);
 }
+  private static int medianOfThree(int arr[], int low, int high) {
+    int mid = low + (high - low) / 2;
+    if (arr[low] > arr[mid])
+      swap(arr, low, mid);
+    if (arr[low] > arr[high])
+        swap(arr, low, high);
+    if (arr[mid] > arr[high])
+        swap(arr, mid, high);
+    return mid;
+    }
 
 
  
   public static void main(String[] args) {
-    int[] array = { 7, 6, 5, 4, 3, 2, 1 };
-    System.out.println("Unsorted: " + Arrays.toString(array));
- 
     QuickSortMedian3 qs = new QuickSortMedian3();
-    qs.quickSortRecursiveWithMedian3Pivot(array);
-    System.out.println("Sorted: " + Arrays.toString(array));
-
-    System.out.println();
-
-    int[] array2 = { 7, 6, 5, 4, 3, 2, 1 };
+    int[] array2 = {15, 13, 19, 12, 16, 18, 22};
     System.out.println("Unsorted: " + Arrays.toString(array2));
     qs.quickSortIterativeWithMedian3Pivot(array2);
     System.out.println("Sorted: " + Arrays.toString(array2));
+
+
 
 } 
 }
