@@ -1,69 +1,126 @@
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Seminar2 {
-    private static char[] readFile(String filePath) {
-        File file = new File(filePath);
-        char[] content = new char[(int) file.length()];
-        try (FileReader reader = new FileReader(file)) {
-            reader.read(content);
-        } catch (IOException e) {
-            e.printStackTrace();
+    private static Stack<Character> stack = new Stack<>();
+    
+
+    
+    private static char[] readFile(List<String> lines) {
+        StringBuilder sb = new StringBuilder();
+        for (String line : lines) {
+            sb.append(line);
         }
-        return content;
+        return sb.toString().toCharArray();
     }
 
-    private static void check(char[] content) {
-        Stack<Character> stack = new Stack<>();
-
+    private static boolean checkSymbols(char[] content) {
         for (int i = 0; i < content.length; i++) {
-            char currentChar = content[i];
-            if (currentChar == '[' || currentChar == '{' || currentChar == '(') {
-                stack.push(currentChar);
-            } else if (currentChar == '/' && content[i + 1] == '*') {
-                stack.push(currentChar);
-                stack.push(content[i + 1]);
-                i++;
-            } else if (currentChar == '/' && content[i + 1] == '/') {
-                stack.push(currentChar);
-                stack.push(content[i + 1]);
-                i++;
-            } else if (currentChar == ']' || currentChar == '}' || currentChar == ')') {
+            if (content[i] == '[' || content[i] == '{' || content[i] == '(') {
+                stack.push(content[i]);
+                continue;
+            } else if (content[i] == ']' || content[i] == '}' || content[i] == ')') {
                 if (stack.isEmpty()) {
-                    System.out.println("Error: " + currentChar + " at position " + i);
-                    return;
+                    System.out.println("There is no opening symbol for " + content[i]);
+                } else if (stack.peek() == '[' || stack.peek() == '{' || stack.peek() == '(') {
+                    stack.pop();
+                }else{
+                    System.out.println("There is no opening symbol for " + content[i]);
                 }
-                char lastChar = stack.pop();
-                if (currentChar == ']' && lastChar != '[') {
-                    System.out.println("Error: " + currentChar + " at position " + i);
-                    return;
-                } else if (currentChar == '}' && lastChar != '{') {
-                    System.out.println("Error: " + currentChar + " at position " + i);
-                    return;
-                } else if (currentChar == ')' && lastChar != '(') {
-                    System.out.println("Error: " + currentChar + " at position " + i);
-                    return;
+
+            }else if(content[i] == '/'){
+                stack.push(content[i]);
+                if(content[i+1] == '*'){
+                    stack.push(content[i+1]);
+                    i++;
+                    continue;
+                }else if(content[i+1] == '/'){
+                    stack.pop();
+                    i++;
+                    continue;
+                }else{
+                    System.out.println("Do something wih /");
                 }
-            } else if (currentChar == '*' && content[i + 1] == '/') {
-                // Handle the end of a multi-line comment
-                while (!stack.isEmpty() && stack.pop() != '*') {
-                    // Pop characters until the closing '/' of the multi-line comment is found
+            }else if(content[i] == '*' && content[i+1] == '/'){
+                if (stack.isEmpty() || stack.peek() != '*') {
+                    System.out.println("There is no opening symbol for " + content[i] + content[i+1]);
+                }else{
+                    stack.pop();
+                    stack.pop();
+                    i++;
                 }
-                // Check if stack is not empty before popping '*'
-                if (!stack.isEmpty() && stack.pop() != '/') {
-                    System.out.println("Error: " + currentChar + " at position " + i);
-                    return;
-                }
-                i++; // Increment to skip the closing '/'
             }
         }
+        return stack.isEmpty();
     }
 
-    public static void main(String[] args) {
-        String filePath = "test.txt";
-        char[] content = readFile(filePath);
-        check(content);
+    public static void main(String[] args) throws IOException {
+        while(true){
+            try{
+                try (Scanner sc = new Scanner(System.in)) {
+                    System.out.println("1. Enter file path");
+                    System.out.println("2. Enter text");
+                    System.out.println("3. Exit");
+                    System.out.print(">> ");
+                    int choice = sc.nextInt();
+                    sc.nextLine();
+                    if (choice == 1) {
+                        System.out.print("Enter file path: ");
+                        String filePath = sc.nextLine();
+                        //read file
+                        List<String> content = Files.readAllLines(Paths.get(filePath));
+                        System.out.println(content);
+                        char[] fileContent = readFile(content);
+                        System.out.println(Arrays.toString(fileContent));
+                        //check symbols
+                        if (checkSymbols(fileContent)) {
+                            System.out.println("The text is balanced");
+                        } else {
+                            System.out.println("The text is not balanced, check the symbols");
+                        }
+                    } else if (choice == 2) {
+                        System.out.print("Enter text: ");
+                        String text = sc.nextLine();
+                        char[] fileContent = text.toCharArray();
+                        System.out.println(Arrays.toString(fileContent));
+                        //check symbols
+                        if (checkSymbols(fileContent)) {
+                            System.out.println("The text is balanced");
+                        } else {
+                            System.out.println("The text is not balanced, check the symbols");
+                        }
+                    } else if (choice == 3) {
+                        break;
+                    } else {
+                        System.out.println("Invalid choice");
+                        System.out.println();
+                    }
+                }
+            }catch(Exception e){
+                System.out.println("Invalid input");
+                System.out.println();
+            }
+        }
+
+        
+        /*String filePath = "test.txt";
+        //read file
+        List<String> content = Files.readAllLines(Paths.get(filePath));
+        System.out.println(content);
+        char[] fileContent = readFile(content);
+        System.out.println(Arrays.toString(fileContent));
+        //check symbols
+        if (checkSymbols(fileContent)) {
+            System.out.println("The symbols are correct");
+        } else {
+            System.out.println("The symbols are not correct");
+        }*/
+
     }
 }
+
