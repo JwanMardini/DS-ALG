@@ -6,9 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Seminar2 {
+public class Task1 {
     private static Stack<Character> stack = new Stack<>();
-    
 
     
     private static char[] readFile(List<String> lines) {
