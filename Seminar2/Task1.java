@@ -8,12 +8,16 @@ import java.util.Stack;
 
 public class Task1 {
     private static Stack<Character> stack = new Stack<>();
+    private static boolean inComment = false;
 
     
     private static char[] readFile(List<String> lines) {
         StringBuilder sb = new StringBuilder();
         for (String line : lines) {
             sb.append(line);
+            //new line character
+            sb.append('ä');
+            
         }
         return sb.toString().toCharArray();
     }
@@ -33,19 +37,28 @@ public class Task1 {
                 }
 
             }else if(content[i] == '/'){
-                stack.push(content[i]);
-                if(content[i+1] == '*'){
+                if(inComment && content[i+1] == '*'){
+                    stack.push(content[i]);
                     stack.push(content[i+1]);
                     i++;
+                    inComment = true;
                     continue;
-                }else if(content[i+1] == '/'){
-                    stack.pop();
-                    i++;
+                }else if(inComment && content[i+1] == '/'){
+                    inComment = true;
+                    stack.push(content[i]);
+                    stack.push(content[i+1]);
+                    for (int j = i+2; j < content.length; j++) {
+                        if(content[j] == 'ä'){
+                            stack.pop();
+                            stack.pop();
+                            i = j;
+                            inComment = false;
+                            break;
+                        }
+                    }
                     continue;
-                }else{
-                    System.out.println("Do something wih /");
                 }
-            }else if(content[i] == '*' && content[i+1] == '/'){
+            }else if(inComment && content[i] == '*' && content[i+1] == '/'){
                 if (stack.isEmpty() || stack.peek() != '*') {
                     System.out.println("There is no opening symbol for " + content[i] + content[i+1]);
                 }else{
@@ -53,15 +66,16 @@ public class Task1 {
                     stack.pop();
                     i++;
                 }
+                inComment = false;
             }
         }
         return stack.isEmpty();
     }
 
     public static void main(String[] args) throws IOException {
-        while(true){
-            try{
-                try (Scanner sc = new Scanner(System.in)) {
+        /*try (Scanner sc = new Scanner(System.in)){
+            while(true){
+                try{
                     System.out.println("1. Enter file path");
                     System.out.println("2. Enter text");
                     System.out.println("3. Exit");
@@ -79,9 +93,12 @@ public class Task1 {
                         //check symbols
                         if (checkSymbols(fileContent)) {
                             System.out.println("The text is balanced");
+                            System.out.println();
                         } else {
                             System.out.println("The text is not balanced, check the symbols");
+                            System.out.println();
                         }
+
                     } else if (choice == 2) {
                         System.out.print("Enter text: ");
                         String text = sc.nextLine();
@@ -93,33 +110,39 @@ public class Task1 {
                         } else {
                             System.out.println("The text is not balanced, check the symbols");
                         }
+                        
                     } else if (choice == 3) {
                         break;
                     } else {
                         System.out.println("Invalid choice");
                         System.out.println();
+                        sc.nextLine();
                     }
+                }catch(Exception e){
+                    System.out.println("Invalid input");
+                    System.out.println();
+                    
                 }
-            }catch(Exception e){
-                System.out.println("Invalid input");
-                System.out.println();
-            }
-        }
+            }*/
 
-        
-        /*String filePath = "test.txt";
+        String filePath = "test.txt";
         //read file
         List<String> content = Files.readAllLines(Paths.get(filePath));
         System.out.println(content);
+        System.out.println();
         char[] fileContent = readFile(content);
         System.out.println(Arrays.toString(fileContent));
+        System.out.println();
         //check symbols
         if (checkSymbols(fileContent)) {
             System.out.println("The symbols are correct");
         } else {
             System.out.println("The symbols are not correct");
-        }*/
+        }
 
     }
+
 }
+
+
 
