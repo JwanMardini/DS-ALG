@@ -10,72 +10,54 @@ public class Task1 {
     private static Stack<Character> stack = new Stack<>();
     private static boolean inComment = false;
 
-    
-    private static char[] readFile(List<String> lines) {
-        StringBuilder sb = new StringBuilder();
-        for (String line : lines) {
-            sb.append(line);
-            //new line character
-            sb.append('ä');
-            
-        }
-        return sb.toString().toCharArray();
-    }
 
-    private static boolean checkSymbols(char[] content) {
-        for (int i = 0; i < content.length; i++) {
-            if (content[i] == '[' || content[i] == '{' || content[i] == '(') {
-                stack.push(content[i]);
-                continue;
-            } else if (content[i] == ']' || content[i] == '}' || content[i] == ')') {
-                if (stack.isEmpty()) {
-                    System.out.println("There is no opening symbol for " + content[i]);
-                } else if (stack.peek() == '[' || stack.peek() == '{' || stack.peek() == '(') {
-                    stack.pop();
-                }else{
-                    System.out.println("There is no opening symbol for " + content[i]);
+
+    private static boolean checkSymbols(List<String> content) {
+        for (String line : content) {
+            char[] lineContent = line.toCharArray();
+            for (int i = 0; i < lineContent.length; i++){
+                if (!inComment && lineContent[i] == '/' && lineContent[i + 1] == '/'){
+                    break;
                 }
-
-            }else if(content[i] == '/'){
-                if(inComment && content[i+1] == '*'){
-                    stack.push(content[i]);
-                    stack.push(content[i+1]);
+                if (!inComment && lineContent[i] == '/' && lineContent[i + 1] == '*'){
+                    inComment = true;
                     i++;
-                    inComment = true;
                     continue;
-                }else if(inComment && content[i+1] == '/'){
-                    inComment = true;
-                    stack.push(content[i]);
-                    stack.push(content[i+1]);
-                    for (int j = i+2; j < content.length; j++) {
-                        if(content[j] == 'ä'){
-                            stack.pop();
-                            stack.pop();
-                            i = j;
-                            inComment = false;
-                            break;
-                        }
+                }
+                if (inComment && lineContent[i] == '*' && lineContent[i + 1] == '/'){
+                    inComment = false;
+                    i++;
+                    continue;
+                }
+                if(!inComment && lineContent[i] == '(' || lineContent[i] == '{' || lineContent[i] == '['){
+                    stack.push(lineContent[i]);
+                }
+                if(!inComment && lineContent[i] == ')' || lineContent[i] == '}' || lineContent[i] == ']'){
+                    if(stack.isEmpty()){
+                        return false;
                     }
-                    continue;
+                    char top = stack.pop();
+                    if(top == '(' && lineContent[i] != ')'){
+                        return false;
+                    }
+                    if(top == '{' && lineContent[i] != '}'){
+                        return false;
+                    }
+                    if(top == '[' && lineContent[i] != ']'){
+                        return false;
+                    }
                 }
-            }else if(inComment && content[i] == '*' && content[i+1] == '/'){
-                if (stack.isEmpty() || stack.peek() != '*') {
-                    System.out.println("There is no opening symbol for " + content[i] + content[i+1]);
-                }else{
-                    stack.pop();
-                    stack.pop();
-                    i++;
-                }
-                inComment = false;
+
             }
         }
         return stack.isEmpty();
     }
 
     public static void main(String[] args) throws IOException {
-        /*try (Scanner sc = new Scanner(System.in)){
+        try (Scanner sc = new Scanner(System.in)){
             while(true){
                 try{
+                    System.out.println();
                     System.out.println("1. Enter file path");
                     System.out.println("2. Enter text");
                     System.out.println("3. Exit");
@@ -88,24 +70,21 @@ public class Task1 {
                         //read file
                         List<String> content = Files.readAllLines(Paths.get(filePath));
                         System.out.println(content);
-                        char[] fileContent = readFile(content);
-                        System.out.println(Arrays.toString(fileContent));
                         //check symbols
-                        if (checkSymbols(fileContent)) {
+                        if (checkSymbols(content)) {
                             System.out.println("The text is balanced");
-                            System.out.println();
+                            
                         } else {
                             System.out.println("The text is not balanced, check the symbols");
-                            System.out.println();
                         }
 
                     } else if (choice == 2) {
                         System.out.print("Enter text: ");
                         String text = sc.nextLine();
-                        char[] fileContent = text.toCharArray();
-                        System.out.println(Arrays.toString(fileContent));
+                        List<String> content = Arrays.asList(text);
+                        System.out.println(content);
                         //check symbols
-                        if (checkSymbols(fileContent)) {
+                        if (checkSymbols(content)) {
                             System.out.println("The text is balanced");
                         } else {
                             System.out.println("The text is not balanced, check the symbols");
@@ -120,29 +99,22 @@ public class Task1 {
                     }
                 }catch(Exception e){
                     System.out.println("Invalid input");
-                    System.out.println();
                     
                 }
-            }*/
+            }
 
-        String filePath = "test.txt";
+        /*String filePath = "test.txt";
         //read file
         List<String> content = Files.readAllLines(Paths.get(filePath));
         System.out.println(content);
-        System.out.println();
-        char[] fileContent = readFile(content);
-        System.out.println(Arrays.toString(fileContent));
-        System.out.println();
         //check symbols
-        if (checkSymbols(fileContent)) {
+        if (checkSymbols(content)) {
             System.out.println("The symbols are correct");
         } else {
             System.out.println("The symbols are not correct");
-        }
+        }*/
 
     }
 
 }
-
-
-
+}
