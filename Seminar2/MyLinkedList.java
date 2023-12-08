@@ -1,4 +1,4 @@
-public class LinkedList<T> {
+public class MyLinkedList<T> {
     private Node<T> head;
     private Node<T> tail;
     private int length;
@@ -12,14 +12,14 @@ public class LinkedList<T> {
         }
     }
 
-    public LinkedList(T value) {
+    public MyLinkedList(T value) {
         Node<T> newNode = new Node<>(value);
         this.head = newNode;
         this.tail = newNode;
         this.length = 1;
     }
 
-    public LinkedList() {
+    public MyLinkedList() {
         this.head = null;
         this.tail = null;
         this.length = 0;
@@ -136,12 +136,12 @@ public class LinkedList<T> {
         else System.out.println(this.tail.value);
     }
 
-    public void getHead() {
-        if (this.head == null) return;
-        else System.out.println(this.head.value);
+    public Node getHead() {
+        if (this.head == null) return null;
+        else return this.head;
     }
 
-    public void getLength() {
-        System.out.println(this.length);
+    public int getLength() {
+        return this.length;
     }
 }

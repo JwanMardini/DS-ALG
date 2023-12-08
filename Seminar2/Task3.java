@@ -1,6 +1,6 @@
 public class Task3 {
     public static void main(String[] args) {
-        LinkedList<Contact> contacts = new LinkedList<>();
+        MyLinkedList<Contact> contacts = new MyLinkedList<>();
         Contact c1 = new Contact("Ahmed", "Kristianstad");
         Contact c2 = new Contact("Alloush", "Malmö");
         Contact c3 = new Contact("Abshir", "GBG");
