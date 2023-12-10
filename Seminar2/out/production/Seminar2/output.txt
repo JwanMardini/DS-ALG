@@ -1,323 +1,259 @@
-n = 1000, m = 10
-ArrayList: 6434 nanoseconds
-ArrayList Iterator: 6748 nanoseconds
-LinkedList: 2350 nanoseconds
-LinkedList Iterator: 8373 nanoseconds
+n = 1000, m = 1
+ArrayList: 10438300 nanoseconds
+ArrayList Iterator: 6656400 nanoseconds
+LinkedList: 2318000 nanoseconds
+LinkedList Iterator: 7456500 nanoseconds
+Winner: 977
 
-n = 1000, m = 100
-ArrayList: 355 nanoseconds
-ArrayList Iterator: 4877 nanoseconds
-LinkedList: 1468 nanoseconds
-LinkedList Iterator: 6860 nanoseconds
+n = 1500, m = 1
+ArrayList: 659300 nanoseconds
+ArrayList Iterator: 9593100 nanoseconds
+LinkedList: 2921400 nanoseconds
+LinkedList Iterator: 11698100 nanoseconds
+Winner: 953
 
-n = 1000, m = 1000
-ArrayList: 336 nanoseconds
-ArrayList Iterator: 4303 nanoseconds
-LinkedList: 652 nanoseconds
-LinkedList Iterator: 6940 nanoseconds
+n = 2000, m = 1
+ArrayList: 631800 nanoseconds
+ArrayList Iterator: 15099600 nanoseconds
+LinkedList: 1537900 nanoseconds
+LinkedList Iterator: 14349800 nanoseconds
+Winner: 1953
 
-n = 1500, m = 10
-ArrayList: 539 nanoseconds
-ArrayList Iterator: 2425 nanoseconds
-LinkedList: 1643 nanoseconds
-LinkedList Iterator: 15005 nanoseconds
+n = 2500, m = 1
+ArrayList: 702600 nanoseconds
+ArrayList Iterator: 777700 nanoseconds
+LinkedList: 2110100 nanoseconds
+LinkedList Iterator: 15265700 nanoseconds
+Winner: 905
 
-n = 1500, m = 100
-ArrayList: 775 nanoseconds
-ArrayList Iterator: 994 nanoseconds
-LinkedList: 1868 nanoseconds
-LinkedList Iterator: 15074 nanoseconds
+n = 3000, m = 1
+ArrayList: 670700 nanoseconds
+ArrayList Iterator: 929100 nanoseconds
+LinkedList: 2646100 nanoseconds
+LinkedList Iterator: 2910600 nanoseconds
+Winner: 1905
 
-n = 1500, m = 1000
-ArrayList: 500 nanoseconds
-ArrayList Iterator: 607 nanoseconds
-LinkedList: 1668 nanoseconds
-LinkedList Iterator: 11092 nanoseconds
+n = 3500, m = 1
+ArrayList: 656200 nanoseconds
+ArrayList Iterator: 2275600 nanoseconds
+LinkedList: 3977000 nanoseconds
+LinkedList Iterator: 3581700 nanoseconds
+Winner: 2905
 
-n = 2000, m = 10
-ArrayList: 856 nanoseconds
-ArrayList Iterator: 1398 nanoseconds
-LinkedList: 3157 nanoseconds
-LinkedList Iterator: 3168 nanoseconds
+n = 4000, m = 1
+ArrayList: 600600 nanoseconds
+ArrayList Iterator: 1265800 nanoseconds
+LinkedList: 4339400 nanoseconds
+LinkedList Iterator: 4063900 nanoseconds
+Winner: 3905
 
-n = 2000, m = 100
-ArrayList: 798 nanoseconds
-ArrayList Iterator: 1058 nanoseconds
-LinkedList: 2796 nanoseconds
-LinkedList Iterator: 2872 nanoseconds
+n = 4500, m = 1
+ArrayList: 733600 nanoseconds
+ArrayList Iterator: 1828500 nanoseconds
+LinkedList: 5591100 nanoseconds
+LinkedList Iterator: 5252900 nanoseconds
+Winner: 809
 
-n = 2000, m = 1000
-ArrayList: 601 nanoseconds
-ArrayList Iterator: 1323 nanoseconds
-LinkedList: 3008 nanoseconds
-LinkedList Iterator: 2813 nanoseconds
+n = 5000, m = 1
+ArrayList: 967500 nanoseconds
+ArrayList Iterator: 1960100 nanoseconds
+LinkedList: 7239400 nanoseconds
+LinkedList Iterator: 7127400 nanoseconds
+Winner: 1809
 
-n = 2500, m = 10
-ArrayList: 721 nanoseconds
-ArrayList Iterator: 1309 nanoseconds
-LinkedList: 4854 nanoseconds
-LinkedList Iterator: 4780 nanoseconds
+n = 5500, m = 1
+ArrayList: 1314200 nanoseconds
+ArrayList Iterator: 2787000 nanoseconds
+LinkedList: 8410600 nanoseconds
+LinkedList Iterator: 8801500 nanoseconds
+Winner: 2809
 
-n = 2500, m = 100
-ArrayList: 982 nanoseconds
-ArrayList Iterator: 1821 nanoseconds
-LinkedList: 5547 nanoseconds
-LinkedList Iterator: 5368 nanoseconds
+n = 6000, m = 1
+ArrayList: 1367900 nanoseconds
+ArrayList Iterator: 2928200 nanoseconds
+LinkedList: 10466300 nanoseconds
+LinkedList Iterator: 14713100 nanoseconds
+Winner: 3809
 
-n = 2500, m = 1000
-ArrayList: 777 nanoseconds
-ArrayList Iterator: 1135 nanoseconds
-LinkedList: 4862 nanoseconds
-LinkedList Iterator: 4667 nanoseconds
+n = 6500, m = 1
+ArrayList: 2273000 nanoseconds
+ArrayList Iterator: 3034100 nanoseconds
+LinkedList: 11464100 nanoseconds
+LinkedList Iterator: 12975700 nanoseconds
+Winner: 4809
 
-n = 3000, m = 10
-ArrayList: 851 nanoseconds
-ArrayList Iterator: 1553 nanoseconds
-LinkedList: 6107 nanoseconds
-LinkedList Iterator: 6308 nanoseconds
+n = 7000, m = 1
+ArrayList: 1295500 nanoseconds
+ArrayList Iterator: 3981400 nanoseconds
+LinkedList: 17749400 nanoseconds
+LinkedList Iterator: 14331200 nanoseconds
+Winner: 5809
 
-n = 3000, m = 100
-ArrayList: 998 nanoseconds
-ArrayList Iterator: 1716 nanoseconds
-LinkedList: 7379 nanoseconds
-LinkedList Iterator: 7172 nanoseconds
+n = 7500, m = 1
+ArrayList: 2410600 nanoseconds
+ArrayList Iterator: 4262500 nanoseconds
+LinkedList: 17636700 nanoseconds
+LinkedList Iterator: 23129700 nanoseconds
+Winner: 6809
 
-n = 3000, m = 1000
-ArrayList: 921 nanoseconds
-ArrayList Iterator: 1427 nanoseconds
-LinkedList: 6732 nanoseconds
-LinkedList Iterator: 6791 nanoseconds
+n = 8000, m = 1
+ArrayList: 1881000 nanoseconds
+ArrayList Iterator: 4554200 nanoseconds
+LinkedList: 17098700 nanoseconds
+LinkedList Iterator: 19370400 nanoseconds
+Winner: 7809
 
-n = 3500, m = 10
-ArrayList: 1209 nanoseconds
-ArrayList Iterator: 1676 nanoseconds
-LinkedList: 7603 nanoseconds
-LinkedList Iterator: 7460 nanoseconds
+n = 8500, m = 1
+ArrayList: 1659000 nanoseconds
+ArrayList Iterator: 3518600 nanoseconds
+LinkedList: 19163900 nanoseconds
+LinkedList Iterator: 17576700 nanoseconds
+Winner: 617
 
-n = 3500, m = 100
-ArrayList: 874 nanoseconds
-ArrayList Iterator: 1463 nanoseconds
-LinkedList: 8436 nanoseconds
-LinkedList Iterator: 8253 nanoseconds
+n = 9000, m = 1
+ArrayList: 2518700 nanoseconds
+ArrayList Iterator: 6525500 nanoseconds
+LinkedList: 24957100 nanoseconds
+LinkedList Iterator: 30618100 nanoseconds
+Winner: 1617
 
-n = 3500, m = 1000
-ArrayList: 710 nanoseconds
-ArrayList Iterator: 1340 nanoseconds
-LinkedList: 8083 nanoseconds
-LinkedList Iterator: 7689 nanoseconds
+n = 9500, m = 1
+ArrayList: 3313400 nanoseconds
+ArrayList Iterator: 5940400 nanoseconds
+LinkedList: 25399400 nanoseconds
+LinkedList Iterator: 29684400 nanoseconds
+Winner: 2617
 
-n = 4000, m = 10
-ArrayList: 969 nanoseconds
-ArrayList Iterator: 1570 nanoseconds
-LinkedList: 8331 nanoseconds
-LinkedList Iterator: 8215 nanoseconds
+n = 10000, m = 1
+ArrayList: 1810900 nanoseconds
+ArrayList Iterator: 5309700 nanoseconds
+LinkedList: 24615800 nanoseconds
+LinkedList Iterator: 35236200 nanoseconds
+Winner: 3617
 
-n = 4000, m = 100
-ArrayList: 885 nanoseconds
-ArrayList Iterator: 1443 nanoseconds
-LinkedList: 8878 nanoseconds
-LinkedList Iterator: 9204 nanoseconds
+n = 15000, m = 1
+ArrayList: 3617300 nanoseconds
+ArrayList Iterator: 9338700 nanoseconds
+LinkedList: 86223400 nanoseconds
+LinkedList Iterator: 74184400 nanoseconds
+Winner: 13617
 
-n = 4000, m = 1000
-ArrayList: 970 nanoseconds
-ArrayList Iterator: 2702 nanoseconds
-LinkedList: 10342 nanoseconds
-LinkedList Iterator: 10620 nanoseconds
+n = 20000, m = 1
+ArrayList: 6427800 nanoseconds
+ArrayList Iterator: 28532500 nanoseconds
+LinkedList: 129559100 nanoseconds
+LinkedList Iterator: 151727200 nanoseconds
+Winner: 7233
 
-n = 4500, m = 10
-ArrayList: 1074 nanoseconds
-ArrayList Iterator: 2284 nanoseconds
-LinkedList: 12713 nanoseconds
-LinkedList Iterator: 13866 nanoseconds
+n = 25000, m = 1
+ArrayList: 12975000 nanoseconds
+ArrayList Iterator: 35687800 nanoseconds
+LinkedList: 171940100 nanoseconds
+LinkedList Iterator: 180508400 nanoseconds
+Winner: 17233
 
-n = 4500, m = 100
-ArrayList: 1461 nanoseconds
-ArrayList Iterator: 2739 nanoseconds
-LinkedList: 15435 nanoseconds
-LinkedList Iterator: 14425 nanoseconds
+n = 30000, m = 1
+ArrayList: 17160200 nanoseconds
+ArrayList Iterator: 50340600 nanoseconds
+LinkedList: 287007500 nanoseconds
+LinkedList Iterator: 310882400 nanoseconds
+Winner: 27233
 
-n = 4500, m = 1000
-ArrayList: 1092 nanoseconds
-ArrayList Iterator: 2291 nanoseconds
-LinkedList: 13778 nanoseconds
-LinkedList Iterator: 13086 nanoseconds
+n = 35000, m = 1
+ArrayList: 29125400 nanoseconds
+ArrayList Iterator: 73155100 nanoseconds
+LinkedList: 388964600 nanoseconds
+LinkedList Iterator: 402548300 nanoseconds
+Winner: 4465
 
-n = 5000, m = 10
-ArrayList: 1263 nanoseconds
-ArrayList Iterator: 2251 nanoseconds
-LinkedList: 13033 nanoseconds
-LinkedList Iterator: 12583 nanoseconds
+n = 40000, m = 1
+ArrayList: 41811900 nanoseconds
+ArrayList Iterator: 87125300 nanoseconds
+LinkedList: 508965400 nanoseconds
+LinkedList Iterator: 495233800 nanoseconds
+Winner: 14465
 
-n = 5000, m = 100
-ArrayList: 1127 nanoseconds
-ArrayList Iterator: 3559 nanoseconds
-LinkedList: 14006 nanoseconds
-LinkedList Iterator: 14536 nanoseconds
+n = 45000, m = 1
+ArrayList: 49487000 nanoseconds
+ArrayList Iterator: 126244400 nanoseconds
+LinkedList: 660226300 nanoseconds
+LinkedList Iterator: 671451400 nanoseconds
+Winner: 24465
 
-n = 5000, m = 1000
-ArrayList: 1067 nanoseconds
-ArrayList Iterator: 2184 nanoseconds
-LinkedList: 16702 nanoseconds
-LinkedList Iterator: 16874 nanoseconds
+n = 50000, m = 1
+ArrayList: 68918100 nanoseconds
+ArrayList Iterator: 138422600 nanoseconds
+LinkedList: 827942100 nanoseconds
+LinkedList Iterator: 772902900 nanoseconds
+Winner: 34465
 
-n = 5500, m = 10
-ArrayList: 1206 nanoseconds
-ArrayList Iterator: 2716 nanoseconds
-LinkedList: 17940 nanoseconds
-LinkedList Iterator: 16624 nanoseconds
+n = 55000, m = 1
+ArrayList: 69288500 nanoseconds
+ArrayList Iterator: 189293400 nanoseconds
+LinkedList: 991867000 nanoseconds
+LinkedList Iterator: 959531800 nanoseconds
+Winner: 44465
 
-n = 5500, m = 100
-ArrayList: 1227 nanoseconds
-ArrayList Iterator: 2795 nanoseconds
-LinkedList: 20020 nanoseconds
-LinkedList Iterator: 19957 nanoseconds
+n = 60000, m = 1
+ArrayList: 85253700 nanoseconds
+ArrayList Iterator: 227622600 nanoseconds
+LinkedList: 1186397100 nanoseconds
+LinkedList Iterator: 1137937200 nanoseconds
+Winner: 54465
 
-n = 5500, m = 1000
-ArrayList: 1437 nanoseconds
-ArrayList Iterator: 3213 nanoseconds
-LinkedList: 25156 nanoseconds
-LinkedList Iterator: 23470 nanoseconds
+n = 65000, m = 1
+ArrayList: 88809800 nanoseconds
+ArrayList Iterator: 247857800 nanoseconds
+LinkedList: 1472321500 nanoseconds
+LinkedList Iterator: 1427067800 nanoseconds
+Winner: 64465
 
-n = 6000, m = 10
-ArrayList: 1630 nanoseconds
-ArrayList Iterator: 3475 nanoseconds
-LinkedList: 24513 nanoseconds
-LinkedList Iterator: 23124 nanoseconds
+n = 70000, m = 1
+ArrayList: 111772400 nanoseconds
+ArrayList Iterator: 273742800 nanoseconds
+LinkedList: 1639531800 nanoseconds
+LinkedList Iterator: 1670851400 nanoseconds
+Winner: 8929
 
-n = 6000, m = 100
-ArrayList: 1535 nanoseconds
-ArrayList Iterator: 3594 nanoseconds
-LinkedList: 26285 nanoseconds
-LinkedList Iterator: 23950 nanoseconds
+n = 75000, m = 1
+ArrayList: 122172800 nanoseconds
+ArrayList Iterator: 381464500 nanoseconds
+LinkedList: 1912054400 nanoseconds
+LinkedList Iterator: 1980557900 nanoseconds
+Winner: 18929
 
-n = 6000, m = 1000
-ArrayList: 1490 nanoseconds
-ArrayList Iterator: 3695 nanoseconds
-LinkedList: 26257 nanoseconds
-LinkedList Iterator: 26944 nanoseconds
+n = 80000, m = 1
+ArrayList: 152579700 nanoseconds
+ArrayList Iterator: 382404200 nanoseconds
+LinkedList: 2416584000 nanoseconds
+LinkedList Iterator: 2379173700 nanoseconds
+Winner: 28929
 
-n = 6500, m = 10
-ArrayList: 1687 nanoseconds
-ArrayList Iterator: 3913 nanoseconds
-LinkedList: 25367 nanoseconds
-LinkedList Iterator: 25831 nanoseconds
+n = 85000, m = 1
+ArrayList: 191592200 nanoseconds
+ArrayList Iterator: 472063400 nanoseconds
+LinkedList: 2630348600 nanoseconds
+LinkedList Iterator: 2575451200 nanoseconds
+Winner: 38929
 
-n = 6500, m = 100
-ArrayList: 1592 nanoseconds
-ArrayList Iterator: 3421 nanoseconds
-LinkedList: 26127 nanoseconds
-LinkedList Iterator: 30293 nanoseconds
+n = 90000, m = 1
+ArrayList: 191687900 nanoseconds
+ArrayList Iterator: 499235900 nanoseconds
+LinkedList: 2969647800 nanoseconds
+LinkedList Iterator: 2914221100 nanoseconds
+Winner: 48929
 
-n = 6500, m = 1000
-ArrayList: 2070 nanoseconds
-ArrayList Iterator: 8521 nanoseconds
-LinkedList: 33843 nanoseconds
-LinkedList Iterator: 31596 nanoseconds
+n = 95000, m = 1
+ArrayList: 212328000 nanoseconds
+ArrayList Iterator: 509034800 nanoseconds
+LinkedList: 3089018100 nanoseconds
+LinkedList Iterator: 3160118900 nanoseconds
+Winner: 58929
 
-n = 7000, m = 10
-ArrayList: 1845 nanoseconds
-ArrayList Iterator: 4303 nanoseconds
-LinkedList: 40665 nanoseconds
-LinkedList Iterator: 36775 nanoseconds
+n = 100000, m = 1
+ArrayList: 216690000 nanoseconds
+ArrayList Iterator: 515061100 nanoseconds
+LinkedList: 3351596900 nanoseconds
+LinkedList Iterator: 3386011400 nanoseconds
+Winner: 68929
 
-n = 7000, m = 100
-ArrayList: 2609 nanoseconds
-ArrayList Iterator: 4695 nanoseconds
-LinkedList: 36592 nanoseconds
-LinkedList Iterator: 35551 nanoseconds
-
-n = 7000, m = 1000
-ArrayList: 2072 nanoseconds
-ArrayList Iterator: 4507 nanoseconds
-LinkedList: 40912 nanoseconds
-LinkedList Iterator: 40119 nanoseconds
-
-n = 7500, m = 10
-ArrayList: 2619 nanoseconds
-ArrayList Iterator: 7067 nanoseconds
-LinkedList: 40440 nanoseconds
-LinkedList Iterator: 76608 nanoseconds
-
-n = 7500, m = 100
-ArrayList: 3390 nanoseconds
-ArrayList Iterator: 19245 nanoseconds
-LinkedList: 51693 nanoseconds
-LinkedList Iterator: 54377 nanoseconds
-
-n = 7500, m = 1000
-ArrayList: 3232 nanoseconds
-ArrayList Iterator: 10103 nanoseconds
-LinkedList: 44968 nanoseconds
-LinkedList Iterator: 44999 nanoseconds
-
-n = 8000, m = 10
-ArrayList: 2558 nanoseconds
-ArrayList Iterator: 6619 nanoseconds
-LinkedList: 44197 nanoseconds
-LinkedList Iterator: 50018 nanoseconds
-
-n = 8000, m = 100
-ArrayList: 3578 nanoseconds
-ArrayList Iterator: 11602 nanoseconds
-LinkedList: 48962 nanoseconds
-LinkedList Iterator: 51667 nanoseconds
-
-n = 8000, m = 1000
-ArrayList: 2208 nanoseconds
-ArrayList Iterator: 5882 nanoseconds
-LinkedList: 60641 nanoseconds
-LinkedList Iterator: 62176 nanoseconds
-
-n = 8500, m = 10
-ArrayList: 2115 nanoseconds
-ArrayList Iterator: 5750 nanoseconds
-LinkedList: 43178 nanoseconds
-LinkedList Iterator: 39950 nanoseconds
-
-n = 8500, m = 100
-ArrayList: 2063 nanoseconds
-ArrayList Iterator: 5928 nanoseconds
-LinkedList: 53253 nanoseconds
-LinkedList Iterator: 49589 nanoseconds
-
-n = 8500, m = 1000
-ArrayList: 2231 nanoseconds
-ArrayList Iterator: 6178 nanoseconds
-LinkedList: 58443 nanoseconds
-LinkedList Iterator: 60643 nanoseconds
-
-n = 9000, m = 10
-ArrayList: 3787 nanoseconds
-ArrayList Iterator: 7511 nanoseconds
-LinkedList: 53656 nanoseconds
-LinkedList Iterator: 58270 nanoseconds
-
-n = 9000, m = 100
-ArrayList: 2612 nanoseconds
-ArrayList Iterator: 6506 nanoseconds
-LinkedList: 55206 nanoseconds
-LinkedList Iterator: 65299 nanoseconds
-
-n = 9000, m = 1000
-ArrayList: 2398 nanoseconds
-ArrayList Iterator: 6294 nanoseconds
-LinkedList: 56215 nanoseconds
-LinkedList Iterator: 54389 nanoseconds
-
-n = 9500, m = 10
-ArrayList: 3068 nanoseconds
-ArrayList Iterator: 7838 nanoseconds
-LinkedList: 66893 nanoseconds
-LinkedList Iterator: 73169 nanoseconds
-
-n = 9500, m = 100
-ArrayList: 3326 nanoseconds
-ArrayList Iterator: 8509 nanoseconds
-LinkedList: 71406 nanoseconds
-LinkedList Iterator: 81852 nanoseconds
-
-n = 9500, m = 1000
-ArrayList: 2605 nanoseconds
-ArrayList Iterator: 7066 nanoseconds
-LinkedList: 68277 nanoseconds
-LinkedList Iterator: 63370

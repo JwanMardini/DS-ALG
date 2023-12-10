@@ -2,16 +2,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Task2d {
-    // source https://www.geeksforgeeks.org/stack-using-queue/
     Queue<Integer> queue = new LinkedList<>();
 
     public void push(int element) {
         System.out.println("Pushing element: " + element);
-        queue.add(element);
+        queue.add(element);// add to queue
 
-        int s = queue.size();
-        for (int i = 0; i < s - 1; i++) {
-            queue.add(queue.remove());
+        int s = queue.size(); // size of queue
+        for (int i = 0; i < s - 1; i++) { // move all elements from queue to queue
+            queue.add(queue.remove()); // remove from queue and add to queue
         }
         System.out.println("After push, queue: " + queue);
     }
@@ -21,7 +20,7 @@ public class Task2d {
             System.out.println("Stack is empty");
             return -1;
         } else {
-            int poppedElement = queue.remove();
+            int poppedElement = queue.remove(); // remove from queue
             System.out.println("Popping element: " + poppedElement);
             return poppedElement;
         }

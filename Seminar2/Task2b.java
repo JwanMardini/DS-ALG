@@ -1,7 +1,6 @@
 import java.util.Stack;
 
 public class Task2b {
-    // source https://www.geeksforgeeks.org/queue-using-stacks/
     Stack stack = new Stack();
 
     public void enqueue(int element) {
@@ -15,9 +14,9 @@ public class Task2b {
         } else if (stack.size() == 1) {
             return (int) stack.pop();
         } else {
-            int temp = (int) stack.pop();
-            int result = dequeue();
-            stack.push(temp);
+            int temp = (int) stack.pop(); // store the last element
+            int result = dequeue(); // dequeue the rest of the elements
+            stack.push(temp);// push the last element back
             return result;
         }
     }

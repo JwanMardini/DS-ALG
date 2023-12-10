@@ -7,42 +7,48 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Task4 {
-    public static void usingArrayList(int n, int m){
+    public static Integer usingArrayList(int n, int m){
         ArrayList<Integer> arr = getArrayList(n);
         long startTime = System.nanoTime();
-        System.out.println(Josephus(arr, 0, m));
+        Integer result = Josephus(arr, 0, m);
+        System.out.println(result);
         long endTime = System.nanoTime();
         long duration = (endTime - startTime)/1000;
         System.out.println("ArrayList: " + duration + " nanoseconds");
-
+        return result;
     }
 
-    public static void usingArrayListIterator(int n, int m){
+    public static Integer usingArrayListIterator(int n, int m){
         ArrayList<Integer> arr = getArrayList(n);
         long startTime = System.nanoTime();
-        System.out.println(JosephusIterator(arr, 0, m));
+        Integer result = JosephusIterator(arr, 0, m);
+        System.out.println(result);
         long endTime = System.nanoTime();
-        long duration = (endTime - startTime)/1000;
+        long duration = (endTime - startTime);
         System.out.println("ArrayList Iterator: " + duration + " nanoseconds");
-
+        return result;
     }
 
-    public static void usingLinkedList(int n, int m){
+    public static Integer usingLinkedList(int n, int m){
         MyLinkedList<Integer> list = getMyLinkedList(n);
         long startTime = System.nanoTime();
-        System.out.println(Josephus(list, 0, m));
+        Integer result = Josephus(list, 0, m);
+        System.out.println(result);
         long endTime = System.nanoTime();
-        long duration = (endTime - startTime)/1000;
+        long duration = (endTime - startTime);
         System.out.println("LinkedList: " + duration + " nanoseconds");
+        return result;
     }
 
-    public static void usingLinkedListIterator(int n, int m){
+    public static Integer usingLinkedListIterator(int n, int m){
         LinkedList<Integer> list = getLinkedList(n);
         long startTime = System.nanoTime();
-        System.out.println(JosephusIterator(list, 0, m));
+        Integer result = JosephusIterator(list, 0, m);
+        System.out.println(result);
         long endTime = System.nanoTime();
-        long duration = (endTime - startTime)/1000;
+        long duration = (endTime - startTime);
         System.out.println("LinkedList Iterator: " + duration + " nanoseconds");
+        return result;
 
     }
 
@@ -116,13 +122,14 @@ public class Task4 {
     }
 
     public static void fileWriter(BufferedWriter bw, Integer n, Integer m, long runningTimeAr, long runningTimeArIt,
-                                  long runningTimeLi, long runningTimeLiIt) throws IOException {
+                                  long runningTimeLi, long runningTimeLiIt, Integer winner) throws IOException {
         String filePath = "output.txt";
         bw.write("n = " + n + ", m = " + m + "\n");
         bw.write("ArrayList: " + runningTimeAr + " nanoseconds\n");
         bw.write("ArrayList Iterator: " + runningTimeArIt + " nanoseconds\n");
         bw.write("LinkedList: " + runningTimeLi + " nanoseconds\n");
         bw.write("LinkedList Iterator: " + runningTimeLiIt + " nanoseconds\n");
+        bw.write("Winner: " + winner + "\n");
         bw.write("\n");
     }
 
@@ -135,8 +142,9 @@ public class Task4 {
             System.out.println("2. ArrayList Iterator");
             System.out.println("3. LinkedList");
             System.out.println("4. LinkedList Iterator");
-            System.out.println("5. Test all with an input array");
-            System.out.println("6. Exit");
+            System.out.println("5. Different n and m = 1");
+            System.out.println("6. n = 10000, Different m");
+            System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             switch (choice) {
@@ -173,42 +181,69 @@ public class Task4 {
                             , 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 15000, 20000, 25000, 30000
                             , 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000};
 
-                    Integer[] mArr = {10, 100, 1000};
+                    Integer steps = 1;
                     String filePath = "output.txt";
                     try(BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
                         for (int i = 0; i < nArr.length; i++) {
-                            System.out.println("n = " + nArr[i]);
-                            for (int j = 0; j < mArr.length; j++) {
-                                System.out.println("m = " + mArr[j]);
-                                long startTime = System.nanoTime();
-                                usingArrayList(nArr[i], mArr[j]);
-                                long endTime = System.nanoTime();
-                                long durationAr = (endTime - startTime) / 1000;
+                            long startTime = System.nanoTime();
+                            Integer result = usingArrayList(nArr[i], steps);
+                            long endTime = System.nanoTime();
+                            long runningTimeAr = (endTime - startTime);
 
-                                long startTime1 = System.nanoTime();
-                                usingArrayListIterator(nArr[i], mArr[j]);
-                                long endTime1 = System.nanoTime();
-                                long durationArIt = (endTime1 - startTime1) / 1000;
+                            startTime = System.nanoTime();
+                            usingArrayListIterator(nArr[i], steps);
+                            endTime = System.nanoTime();
+                            long runningTimeArIt = (endTime - startTime);
 
-                                long startTime2 = System.nanoTime();
-                                usingLinkedList(nArr[i], mArr[j]);
-                                long endTime2 = System.nanoTime();
-                                long durationLi = (endTime2 - startTime2) / 1000;
+                            startTime = System.nanoTime();
+                            usingLinkedList(nArr[i], steps);
+                            endTime = System.nanoTime();
+                            long runningTimeLi = (endTime - startTime);
 
-                                long startTime3 = System.nanoTime();
-                                usingLinkedListIterator(nArr[i], mArr[j]);
-                                long endTime3 = System.nanoTime();
-                                long durationLiIt = (endTime3 - startTime3) / 1000;
+                            startTime = System.nanoTime();
+                            usingLinkedListIterator(nArr[i], steps);
+                            endTime = System.nanoTime();
+                            long runningTimeLiIt = (endTime - startTime);
 
-                                fileWriter(bw, nArr[i], mArr[j], durationAr, durationArIt, durationLi, durationLiIt);
-                            }
-                            System.out.println();
+                            fileWriter(bw, nArr[i], steps, runningTimeAr, runningTimeArIt, runningTimeLi, runningTimeLiIt, result);
 
                         }
                     }
                     System.out.println("see output.txt");
-
                 case 6:
+                    n = 10000;
+                    Integer[] mArr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+                    filePath = "output2.txt";
+
+                    try(BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+                        for (int i = 0; i < mArr.length; i++) {
+                            long startTime = System.nanoTime();
+                            Integer result = usingArrayList(n, mArr[i]);
+                            long endTime = System.nanoTime();
+                            long runningTimeAr = (endTime - startTime);
+
+                            startTime = System.nanoTime();
+                            usingArrayListIterator(n, mArr[i]);
+                            endTime = System.nanoTime();
+                            long runningTimeArIt = (endTime - startTime);
+
+                            startTime = System.nanoTime();
+                            usingLinkedList(n, mArr[i]);
+                            endTime = System.nanoTime();
+                            long runningTimeLi = (endTime - startTime);
+
+                            startTime = System.nanoTime();
+                            usingLinkedListIterator(n, mArr[i]);
+                            endTime = System.nanoTime();
+                            long runningTimeLiIt = (endTime - startTime);
+
+                            fileWriter(bw, n, mArr[i], runningTimeAr, runningTimeArIt, runningTimeLi, runningTimeLiIt, result);
+
+                        }
+                    }
+                    System.out.println("see output2.txt");
+
+                case 7:
                     System.exit(0);
                 default:
                     System.out.println("Invalid choice");

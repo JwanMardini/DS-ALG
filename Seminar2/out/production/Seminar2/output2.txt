@@ -1,0 +1,70 @@
+n = 10000, m = 0
+ArrayList: 17809700 nanoseconds
+ArrayList Iterator: 6219100 nanoseconds
+LinkedList: 4801200 nanoseconds
+LinkedList Iterator: 9490100 nanoseconds
+Winner: 10000
+
+n = 10000, m = 1
+ArrayList: 4147600 nanoseconds
+ArrayList Iterator: 44200300 nanoseconds
+LinkedList: 30017100 nanoseconds
+LinkedList Iterator: 145778500 nanoseconds
+Winner: 3617
+
+n = 10000, m = 2
+ArrayList: 3023500 nanoseconds
+ArrayList Iterator: 5975700 nanoseconds
+LinkedList: 51990900 nanoseconds
+LinkedList Iterator: 40935800 nanoseconds
+Winner: 2692
+
+n = 10000, m = 3
+ArrayList: 2765200 nanoseconds
+ArrayList Iterator: 9285200 nanoseconds
+LinkedList: 64901400 nanoseconds
+LinkedList Iterator: 63077700 nanoseconds
+Winner: 3254
+
+n = 10000, m = 4
+ArrayList: 1471000 nanoseconds
+ArrayList Iterator: 7477100 nanoseconds
+LinkedList: 74370400 nanoseconds
+LinkedList Iterator: 67559100 nanoseconds
+Winner: 646
+
+n = 10000, m = 5
+ArrayList: 1802800 nanoseconds
+ArrayList Iterator: 7232100 nanoseconds
+LinkedList: 52618100 nanoseconds
+LinkedList Iterator: 58750400 nanoseconds
+Winner: 8991
+
+n = 10000, m = 6
+ArrayList: 2365200 nanoseconds
+ArrayList Iterator: 6760600 nanoseconds
+LinkedList: 66019700 nanoseconds
+LinkedList Iterator: 65521600 nanoseconds
+Winner: 3366
+
+n = 10000, m = 7
+ArrayList: 1354000 nanoseconds
+ArrayList Iterator: 5885100 nanoseconds
+LinkedList: 56772000 nanoseconds
+LinkedList Iterator: 74718700 nanoseconds
+Winner: 4314
+
+n = 10000, m = 8
+ArrayList: 3504800 nanoseconds
+ArrayList Iterator: 12046900 nanoseconds
+LinkedList: 67797100 nanoseconds
+LinkedList Iterator: 67623200 nanoseconds
+Winner: 8697
+
+n = 10000, m = 9
+ArrayList: 2042000 nanoseconds
+ArrayList Iterator: 9775900 nanoseconds
+LinkedList: 52599700 nanoseconds
+LinkedList Iterator: 56671000 nanoseconds
+Winner: 9143
+

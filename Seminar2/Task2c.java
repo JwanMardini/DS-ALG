@@ -2,18 +2,17 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Task2c {
-    // source https://www.geeksforgeeks.org/stack-using-queue/
     static Queue queue1 = new LinkedList<>();
     static Queue queue2 = new LinkedList<>();
 
     public void push(int element) {
-        queue2.add(element);
-        while (!queue1.isEmpty()) {
-            queue2.add(queue1.remove());
+        queue2.add(element); // add to queue2
+        while (!queue1.isEmpty()) { // move all elements from queue1 to queue2
+            queue2.add(queue1.remove()); // remove from queue1 and add to queue2
         }
-        Queue temp = queue1;
-        queue1 = queue2;
-        queue2 = temp;
+        Queue temp = queue1; // swap queue1 and queue2
+        queue1 = queue2; // queue1 is now queue2
+        queue2 = temp;// queue2 is now queue1
     }
 
     public int pop() {
@@ -21,7 +20,7 @@ public class Task2c {
             System.out.println("Stack is empty");
             return -1;
         } else {
-            return (int) queue1.remove();
+            return (int) queue1.remove(); // remove from queue1
         }
     }
 
@@ -30,7 +29,7 @@ public class Task2c {
             System.out.println("Stack is empty");
             return -1;
         } else {
-            return (int) queue1.peek();
+            return (int) queue1.peek(); // peek from queue1
         }
     }
 

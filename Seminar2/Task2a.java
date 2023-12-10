@@ -1,7 +1,6 @@
 import java.util.Stack;
 
 public class Task2a {
-    // source https://www.geeksforgeeks.org/queue-using-stacks/
     Stack stack1 = new Stack();
     Stack stack2 = new Stack();
 
