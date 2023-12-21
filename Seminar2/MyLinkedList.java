@@ -145,3 +145,11 @@ public class MyLinkedList<T> {
         return this.length;
     }
 }
+
+    /*
+     Big O Notation and Time Complexity:
+        Insertion: O(1)
+        Removal: It depends... O(1) or O(N)
+        Searching: O(N)
+        Access: O(N)
+     */
