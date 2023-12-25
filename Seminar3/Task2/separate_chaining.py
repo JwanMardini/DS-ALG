@@ -24,6 +24,8 @@ class seperate_chaining:
         return key % self.size
 
     def insert(self, key):
+        if None not in self.nodes:
+            self.__rehash()
         index = self.hash(key)
         new_node = seperate_chaining.Node(key, None)
         if self.nodes[index] is None:
@@ -40,4 +42,14 @@ class seperate_chaining:
             temp = self.nodes[i]
             while temp is not None:
                 print(f"{temp.key}, {temp.value}")
+                temp = temp.next
+
+    def __rehash(self):
+        copy_of_nodes = self.nodes.copy()
+        self.nodes = [None] * len(self.nodes) * 2
+        self.size = self.size * 2
+        for i in range(0, len(copy_of_nodes)):
+            temp = copy_of_nodes[i]
+            while temp is not None:
+                self.insert(temp.key)
                 temp = temp.next

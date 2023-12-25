@@ -7,20 +7,18 @@ class linear_and_quadratic_probing:
         return key % self.size
 
     def insert_linear(self, key):
-        index = self.hash(key)
         if None not in self.keys:
-            print("Hash Table is full")
-            return
+            self.__rehash_linear()
+        index = self.hash(key)
         while self.keys[index] is not None:
             index = (index + 1) % self.size
         self.keys[index] = key
 
     def insert_quadratic(self, key):
+        if None not in self.keys:
+            self.__rehash_quadratic()
         index = self.hash(key)
         i = 1
-        if None not in self.keys:
-            print("Hash Table is full")
-            return
         while self.keys[index] is not None:
             index = (index + i**2) % self.size
             i += 1
@@ -29,3 +27,17 @@ class linear_and_quadratic_probing:
     def print_table(self):
         for i in range(0, len(self.keys)):
             print(f"{i}, {self.keys[i]}")
+
+    def __rehash_linear(self):
+        copy_of_keys = self.keys.copy()
+        self.keys = [None] * len(self.keys) * 2
+        self.size = self.size * 2
+        for i in copy_of_keys:
+            self.insert_linear(i)
+
+    def __rehash_quadratic(self):
+        copy_of_keys = self.keys.copy()
+        self.keys = [None] * len(self.keys) * 2
+        self.size = self.size * 2
+        for i in copy_of_keys:
+            self.insert_quadratic(i)
