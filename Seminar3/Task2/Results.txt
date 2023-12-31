@@ -1,0 +1,23 @@
+Input size: 0, Time: 21670.00056942925, Algorithm: seperate_chaining
+Input size: 0, Time: 11850.001465063542, Algorithm: linear probing
+Input size: 0, Time: 28490.00084097497, Algorithm: quadratic probing
+
+Input size: 0, Time: 18039.998394669965, Algorithm: seperate_chaining
+Input size: 0, Time: 27959.99971567653, Algorithm: linear probing
+Input size: 0, Time: 35950.00089262612, Algorithm: quadratic probing
+
+Input size: 0, Time: 13989.999570185319, Algorithm: seperate_chaining
+Input size: 0, Time: 51120.00071676448, Algorithm: linear probing
+Input size: 0, Time: 18560.000899014995, Algorithm: quadratic probing
+
+Input size: 0, Time: 14909.999299561605, Algorithm: seperate_chaining
+Input size: 0, Time: 14219.99913873151, Algorithm: linear probing
+Input size: 0, Time: 16510.001296410337, Algorithm: quadratic probing
+
+Input size: 0, Time: 18389.99960455112, Algorithm: seperate_chaining
+Input size: 0, Time: 23899.99935985543, Algorithm: linear probing
+Input size: 0, Time: 53929.998830426484, Algorithm: quadratic probing
+
+Input size: 0, Time: 19500.00150827691, Algorithm: seperate_chaining
+Input size: 0, Time: 8830.000297166407, Algorithm: linear probing
+Input size: 0, Time: 28910.00040108338, Algorithm: quadratic probing

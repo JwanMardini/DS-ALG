@@ -41,18 +41,42 @@ class BST:
         traverse(tree.root)
 
         return result
+    
+    def delete(self, value):
+        def delete_node(node, value):
+            if node is None:
+                return node
+            if value < node.value:
+                node.left = delete_node(node.left, value)
+            elif value > node.value:
+                node.right = delete_node(node.right, value)
+            else:
+                if node.left is None:
+                    temp = node.right
+                    node = None
+                    return temp
+                elif node.right is None:
+                    temp = node.left
+                    node = None
+                    return temp
+                temp = self.getMinValueNode(node.right)
+                node.value = temp.value
+                node.right = delete_node(node.right, temp.value)
+            return node
+
+        self.root = delete_node(self.root, value)
 
 
-def main():
-    bst = BST()
-    bst.insert(5)
-    bst.insert(3)
-    bst.insert(7)
-    bst.insert(2)
-    bst.insert(4)
+# def main():
+#     bst = BST()
+#     bst.insert(5)
+#     bst.insert(3)
+#     bst.insert(7)
+#     bst.insert(2)
+#     bst.insert(4)
 
-    print(bst.print_tree(bst))  # Output: [5, 3, 2, 4, 7]
+#     print(bst.print_tree(bst))  # Output: [5, 3, 2, 4, 7]
 
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

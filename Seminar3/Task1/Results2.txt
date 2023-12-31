@@ -1,0 +1,22 @@
+
+Input size: 100, Time: 5000.001692678779, Algorithm: Insert Algorithm 0
+Input size: 100, Time: 11999.996786471456, Algorithm: Heapify Algorithm 0
+Input size: 1000, Time: 39499.99518226832, Algorithm: Insert Algorithm 0
+Input size: 1000, Time: 6700.00008540228, Algorithm: Heapify Algorithm 0
+Input size: 10000, Time: 13700.002455152571, Algorithm: Insert Algorithm 0
+Input size: 10000, Time: 68699.9992467463, Algorithm: Heapify Algorithm 0
+Input size: 100000, Time: 9299.9980552122, Algorithm: Insert Algorithm 0
+Input size: 100000, Time: 8000.002708286047, Algorithm: Heapify Algorithm 0
+Input size: 1000000, Time: 12700.002116616815, Algorithm: Insert Algorithm 0
+Input size: 1000000, Time: 9499.999578110874, Algorithm: Heapify Algorithm 0
+Input size: 0, Time: 0, Algorithm:  
+Input size: 100, Time: 1100.0010999850929, Algorithm: Insert Algorithm
+Input size: 100, Time: 7099.995855242014, Algorithm: Heapify Algorithm
+Input size: 1000, Time: 1400.003384333104, Algorithm: Insert Algorithm
+Input size: 1000, Time: 2600.005245767534, Algorithm: Heapify Algorithm
+Input size: 10000, Time: 8800.001523923129, Algorithm: Insert Algorithm
+Input size: 10000, Time: 10100.004146806896, Algorithm: Heapify Algorithm
+Input size: 100000, Time: 3400.0040614046156, Algorithm: Insert Algorithm
+Input size: 100000, Time: 14299.999747890979, Algorithm: Heapify Algorithm
+Input size: 1000000, Time: 4800.000169780105, Algorithm: Insert Algorithm
+Input size: 1000000, Time: 7099.995855242014, Algorithm: Heapify Algorithm

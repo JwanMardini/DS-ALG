@@ -1,0 +1,2 @@
+Input size: 10000, Time: 0.0, Algorithm: BST Insert
+Input size: 10000, Time: 0.0, Algorithm: BST Insert

@@ -1,0 +1,4 @@
+Input size: 10000, Time: 15300.000086426735, Algorithm: BST Insert
+Input size: 10000, Time: 14600.00203223899, Algorithm: AVL Insert
+Input size: 10000, Time: 14000.004739500582, Algorithm: RB Insert
+Input size: 10000, Time: 27800.000680144876, Algorithm: Heap Insert

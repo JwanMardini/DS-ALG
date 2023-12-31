@@ -83,7 +83,7 @@ puzzle = [
     ['f', 'g', 'd', 't']
 ]
 
-word_list = ['this', 'two', 'fat', 'that']
+word_list = ['this', 'two', 'fat', 'that', 'what']
 
 solver = WordPuzzleSolver(puzzle)
 found_words = solver.solve_puzzle(word_list)
