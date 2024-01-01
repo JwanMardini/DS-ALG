@@ -21,3 +21,30 @@ Input size: 0, Time: 53929.998830426484, Algorithm: quadratic probing
 Input size: 0, Time: 19500.00150827691, Algorithm: seperate_chaining
 Input size: 0, Time: 8830.000297166407, Algorithm: linear probing
 Input size: 0, Time: 28910.00040108338, Algorithm: quadratic probing
+Input size: 0, Time: 13410.006067715585, Algorithm: seperate_chaining
+Input size: 0, Time: 11530.000483617187, Algorithm: linear probing
+Input size: 0, Time: 12159.996549598873, Algorithm: quadratic probing
+Input size: 0, Time: 13829.997624270618, Algorithm: seperate_chaining
+Input size: 0, Time: 5860.000965185463, Algorithm: linear probing
+Input size: 0, Time: 6119.994213804603, Algorithm: quadratic probing
+Input size: 0, Time: 14360.001659952104, Algorithm: seperate_chaining
+Input size: 0, Time: 5289.990804158151, Algorithm: linear probing
+Input size: 0, Time: 9889.999637380242, Algorithm: quadratic probing
+Input size: 0, Time: 6209.997809492052, Algorithm: seperate_chaining
+Input size: 0, Time: 5330.002750270069, Algorithm: linear probing
+Input size: 0, Time: 10499.998461455107, Algorithm: quadratic probing
+Input size: 0, Time: 28820.004081353545, Algorithm: seperate_chaining
+Input size: 0, Time: 21399.997058324516, Algorithm: linear probing
+Input size: 0, Time: 130709.99993942678, Algorithm: quadratic probing
+Input size: 0, Time: 19010.002142749727, Algorithm: seperate_chaining
+Input size: 0, Time: 39459.99778807163, Algorithm: linear probing
+Input size: 0, Time: 25480.001932010055, Algorithm: quadratic probing
+Input size: 0, Time: 60600.0074185431, Algorithm: seperate_chaining
+Input size: 0, Time: 22089.999401941895, Algorithm: linear probing
+Input size: 0, Time: 22529.999841935933, Algorithm: quadratic probing
+Input size: 0, Time: 29880.000511184335, Algorithm: seperate_chaining
+Input size: 0, Time: 21890.000789426267, Algorithm: linear probing
+Input size: 0, Time: 101660.0028378889, Algorithm: quadratic probing
+Input size: 0, Time: 44089.99811857939, Algorithm: seperate_chaining
+Input size: 0, Time: 9089.999366551638, Algorithm: linear probing
+Input size: 0, Time: 12940.002488903701, Algorithm: quadratic probing

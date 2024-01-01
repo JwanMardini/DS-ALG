@@ -126,8 +126,9 @@ def main():
                     print("4. Go Back")
                     choice1 = int(input("Enter your choice: "))
                     if choice1 == 1:
+                        heap.clear()
                         for i in heap_2:
-                            insert(i)
+                            insert(i, heap)
                         print("Algorithm 1")
                         print("Preorder: ", tr.pre_order(heap))
                         print("Inorder: ", tr.in_order(heap))

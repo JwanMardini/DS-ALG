@@ -34,7 +34,6 @@ class WordPuzzleSolver:
 
     def solve_puzzle(self, words):
         self.build_word_dict(words)
-
         # Define the eight possible directions (horizontal, vertical, and diagonal)
         directions = [
             (0, 1),  # right

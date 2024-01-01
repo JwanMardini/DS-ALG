@@ -26,9 +26,9 @@ def main():
             hashTable.insert(i)
         end = time.perf_counter()
         running_time = (end - start) * 1000000000
-        hashTable.print_table()
         avg += running_time
         print("Time for seperate_chaining: ", running_time)
+    hashTable.print_table()
     print()
     write_to_file(0, avg/10, "seperate_chaining", path)
 
@@ -42,8 +42,8 @@ def main():
         end1 = time.perf_counter()
         running_time1 = (end1 - start1) * 1000000000
         avg1 += running_time1
-        hashTable1.print_table()
         print("Time for linear probing: ", running_time1)
+    hashTable1.print_table()
     print()
     write_to_file(0, avg1/10, "linear probing", path)
 
@@ -57,8 +57,8 @@ def main():
         end2 = time.perf_counter()
         running_time2 = (end2 - start2) * 1000000000
         avg2 += running_time2
-        hashTable2.print_table()
         print("Time for quadratic probing: ", running_time2)
+    hashTable2.print_table()
     print()
     write_to_file(0, avg2/10, "quadratic probing", path)
 
